@@ -1,0 +1,9 @@
+{
+  "name": "eraofrobotics",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Era of Robotics site",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.56.0"
+  }
+}

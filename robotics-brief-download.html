@@ -11,6 +11,7 @@
     .lead-form{display:grid;gap:12px;margin-top:18px}
     .lead-form input,.lead-form select{width:100%;padding:14px 16px;border-radius:14px;border:1px solid var(--border);background:#0b1222;color:var(--text);font:inherit}
     .fine{font-size:.92rem;color:#cbd5e1}
+    .error{display:none;margin-top:14px;padding:14px 16px;border-radius:14px;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.25);color:#fecaca}
   </style>
 </head>
 <body>
@@ -23,7 +24,7 @@
         <p>This brief is for people who can already feel the robotics shift getting louder but do not want to dig through fifty tabs, ten keynote decks, and one LinkedIn prophet with a ring light to understand what matters.</p>
         <p>It compresses the site’s main thesis into something faster: what changed, where the pressure is building first, which categories are commercially real, and where hype is still doing interpretive dance in front of revenue.</p>
 
-        <form class="lead-form" method="post" action="http://127.0.0.1:8765/capture">
+        <form class="lead-form" id="lead-form">
           <input type="email" id="email" name="email" placeholder="Enter your email for the brief" required />
           <select id="persona" name="persona">
             <option value="general">I’m browsing the category</option>
@@ -32,12 +33,10 @@
             <option value="investor">I’m an investor</option>
             <option value="builder">I’m a builder / engineer</option>
           </select>
-          <input type="hidden" name="source" value="robotics-brief-download" />
-          <input type="hidden" name="interest" value="robotics-brief" />
-          <input type="hidden" name="stage" value="brief-captured" />
           <button class="btn" type="submit">Get the free brief</button>
           <div class="fine">Enter your email and the site will unlock the downloadable robotics brief immediately, then point you to the smartest next step.</div>
         </form>
+        <div class="error" id="error-box"></div>
       </div>
       <div class="hero-media"></div>
     </section>
@@ -58,5 +57,34 @@
       </article>
     </section>
   </div>
+<script>
+const form = document.getElementById('lead-form');
+const errorBox = document.getElementById('error-box');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  errorBox.style.display = 'none';
+  const email = document.getElementById('email').value.trim();
+  const persona = document.getElementById('persona').value;
+  try {
+    const res = await fetch('/api/capture-lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email,
+        persona,
+        source: 'robotics-brief-download',
+        interest: 'robotics-brief',
+        stage: 'brief-captured'
+      })
+    });
+    const data = await res.json();
+    if (!res.ok || !data.ok) throw new Error(data.error || 'capture_failed');
+    window.location.href = data.thankYouUrl || '/brief-unlocked.html';
+  } catch (err) {
+    errorBox.textContent = 'Could not capture your email yet. This frontier still needs the Vercel env vars and Supabase table wired correctly.';
+    errorBox.style.display = 'block';
+  }
+});
+</script>
 </body>
 </html>

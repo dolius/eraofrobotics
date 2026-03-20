@@ -4,68 +4,100 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Robotics Tools & Calculators | Era of Robotics</title>
-  <meta name="description" content="A library of robotics tools, calculators, and useful utility pages for understanding automation, costs, readiness, and learning paths." />
+  <meta name="description" content="A library of robotics tools and calculators for evaluating automation readiness, cost, ROI, and learning paths." />
   <link rel="stylesheet" href="global.css" />
+  <style>
+    .purpose-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .purpose{padding:22px;border-radius:22px;background:var(--panel);border:1px solid var(--border);box-shadow:var(--shadow)}
+    .section-intro{max-width:760px;margin:0 0 18px;color:var(--muted)}
+    @media (max-width:900px){.purpose-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
   <div class="wrap">
     <div class="topnav"><a href="index.html">← Back to Era of Robotics home</a></div>
     <section class="hero card">
       <div class="eyebrow">Tools & Calculators</div>
-      <h1>Useful robotics pages.<br/>Not gadget landfill.</h1>
-      <p>This is the tools layer of Era of Robotics: calculators, utility pages, decision helpers, and practical widgets that help people think through robotics adoption, economics, learning, and implementation instead of reading another vague future article written by someone high on adjectives and low on evidence.</p>
+      <h1>Use these tools when you want to test robotics ideas against reality, not just enthusiasm.</h1>
+      <p>This section exists for visitors who need more than articles. If you are trying to judge whether a workflow is automation-ready, whether a robotics deployment can pay back, or what kind of learning path makes sense, this is where the site becomes practical.</p>
       <div class="button-row">
-        <a class="btn" href="robotics-roi-calculator.html">Open ROI calculator</a>
-        <a class="btn ghost" href="robotics-brief-download.html">Get the free brief</a>
-        <a class="btn ghost" href="reference-asset-page.html">Browse resources</a>
+        <a class="btn" href="automation-readiness-score.html">Start with readiness</a>
+        <a class="btn ghost" href="robotics-roi-calculator.html">Jump to ROI</a>
+        <a class="btn ghost" href="robotics-shift-guide.html">Read the explainer first</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="tag">What the tools are for</div>
+      <h2>Each tool answers a different kind of question.</h2>
+      <p class="section-intro">The mistake most people make is using one tool to answer the wrong question. This section is easier to navigate when you treat each page like a different decision aid instead of a random collection of widgets.</p>
+      <div class="purpose-grid">
+        <article class="purpose">
+          <div class="tag">Question 1</div>
+          <h3>Is this workflow even a good candidate for automation?</h3>
+          <p>Start with readiness if you need to know whether the task is structured, repetitive, stable, and painful enough to justify automation in the first place.</p>
+          <p><a href="automation-readiness-score.html">Open Automation Readiness Score →</a></p>
+        </article>
+        <article class="purpose">
+          <div class="tag">Question 2</div>
+          <h3>How does machine cost compare with human labor cost?</h3>
+          <p>Use the cost comparison tool if you want the blunt side-by-side answer before you build a more elaborate ROI story around it.</p>
+          <p><a href="robot-vs-human-cost.html">Open Robot vs Human Cost →</a></p>
+        </article>
+        <article class="purpose">
+          <div class="tag">Question 3</div>
+          <h3>Could this deployment actually pay back in a sane time frame?</h3>
+          <p>Use the ROI calculator when you want a broader view that includes expected gains, maintenance drag, and payback period.</p>
+          <p><a href="robotics-roi-calculator.html">Open Robotics ROI Calculator →</a></p>
+        </article>
+        <article class="purpose">
+          <div class="tag">Question 4</div>
+          <h3>What should I learn if I want to work in or around robotics?</h3>
+          <p>The learning path builder is not about deployment economics. It is about orientation: what to study next depending on whether you are a builder, founder, operator, or investor.</p>
+          <p><a href="robotics-learning-path.html">Open Learning Path Builder →</a></p>
+        </article>
       </div>
     </section>
 
     <section class="section grid grid-auto">
       <article class="card">
-        <div class="tag">Live calculator</div>
-        <h2>Robotics ROI Calculator</h2>
-        <p>Estimate annual labor savings, payback period, and rough ROI from a robotics deployment — because “the future is exciting” is not a budget model.</p>
-        <p class="status">Live now</p>
-        <p><a href="robotics-roi-calculator.html">Open calculator →</a></p>
-      </article>
-      <article class="card">
-        <div class="tag">Live tool</div>
+        <div class="tag">Decision tool</div>
         <h2>Automation Readiness Score</h2>
-        <p>Score whether a workflow is repetitive, measurable, and stable enough for robotics or automation instead of guessing with expensive confidence.</p>
-        <p class="status">Live now</p>
+        <p>Use this first if you need to know whether the workflow deserves an automation conversation at all.</p>
         <p><a href="automation-readiness-score.html">Open tool →</a></p>
       </article>
       <article class="card">
-        <div class="tag">Live tool</div>
+        <div class="tag">Cost tool</div>
         <h2>Robot vs Human Cost Comparison</h2>
-        <p>Compare annual human labor cost against year-one robotics cost so you can stop calling vibes a financial model.</p>
-        <p class="status">Live now</p>
+        <p>Use this when the immediate question is blunt: what does a machine look like against labor cost in year one?</p>
         <p><a href="robot-vs-human-cost.html">Open tool →</a></p>
       </article>
       <article class="card">
-        <div class="tag">Live tool</div>
+        <div class="tag">ROI tool</div>
+        <h2>Robotics ROI Calculator</h2>
+        <p>Use this when the workflow looks plausible and you want a more complete payback picture.</p>
+        <p><a href="robotics-roi-calculator.html">Open tool →</a></p>
+      </article>
+      <article class="card">
+        <div class="tag">Learning tool</div>
         <h2>Robotics Learning Path Builder</h2>
-        <p>Pick the path that fits your actual role so you stop wandering through random tabs like a caffeinated raccoon with Wi-Fi.</p>
-        <p class="status">Live now</p>
+        <p>Use this when your goal is understanding the field better rather than deciding whether to automate a process tomorrow.</p>
         <p><a href="robotics-learning-path.html">Open tool →</a></p>
       </article>
     </section>
 
     <section class="section grid grid-2-even">
       <article class="card">
-        <div class="tag">Where to start</div>
-        <h2>Use the right tool for the actual question</h2>
-        <p>If you are evaluating a workflow, start with <strong>Automation Readiness Score</strong>. That tells you whether the task is repetitive, stable, and painful enough to even deserve an automation conversation. If that answer is weak, stop there and save yourself the heroic spreadsheet cosplay.</p>
-        <p>If the workflow looks plausible, move to <strong>Robot vs Human Cost Comparison</strong> for the blunt year-one reality check. That page is useful when you need a fast answer to the question every operator eventually asks: are we replacing expensive labor with something cheaper, or just buying a shinier problem?</p>
-        <p>Then use the <strong>Robotics ROI Calculator</strong> when you want a slightly richer model that includes productivity gain and payback period. The <strong>Learning Path Builder</strong> is the odd one out on purpose: it is for students, founders, operators, or investors trying to understand the field, not for deciding whether to automate a warehouse aisle next quarter.</p>
+        <div class="tag">If you are new here</div>
+        <h2>Read first, then calculate.</h2>
+        <p>If the category still feels fuzzy, the best move is to read the main explainer before diving into the tools. The tools are strongest when you already understand the broader robotics shift and what kinds of use cases are gaining traction.</p>
+        <p><a href="robotics-shift-guide.html">Read the explainer →</a></p>
       </article>
       <article class="card">
-        <div class="tag">Why this matters</div>
-        <h2>Robotics gets expensive when people skip the boring questions</h2>
-        <p>A lot of bad robotics decisions happen in exactly the same sequence: somebody sees a demo, confuses novelty for readiness, invents a heroic ROI story, and only later discovers that the workflow is too messy, the environment is too variable, or the maintenance drag eats the win alive.</p>
-        <p>These tools exist to slow that nonsense down. They are not perfect models, but they are useful filters. They turn “robotics seems important” into more disciplined questions about labor pressure, task stability, throughput, payback, and where the operational pain actually lives.</p>
-        <p><a href="robotics-shift-guide.html">Read the explainer →</a> · <a href="reference-asset-page.html">Browse resources →</a> · <a href="robotics-brief-download.html">Get the brief →</a></p>
+        <div class="tag">If you want a shorter summary</div>
+        <h2>Get the brief, then come back when you need the numbers.</h2>
+        <p>The free brief is the faster route if you want the category summary first. Then use these tools when you are ready to evaluate a deployment, a workflow, or a learning direction more seriously.</p>
+        <p><a href="robotics-brief-download.html">Get the free brief →</a></p>
       </article>
     </section>
   </div>

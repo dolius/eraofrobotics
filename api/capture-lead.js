@@ -14,13 +14,20 @@ export default async function handler(req, res) {
   }
 
   const url = process.env.SUPABASE_URL;
-  const secret = process.env.SUPABASE_SECRET_KEY;
+  const secret = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !secret) {
     return json(res, 500, { ok: false, error: 'missing_supabase_env' });
   }
 
   const supabase = createClient(url, secret);
-  const body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {});
+  let body = req.body || {};
+  if (typeof body === 'string') {
+    try {
+      body = JSON.parse(body || '{}');
+    } catch {
+      body = {};
+    }
+  }
 
   const email = String(body.email || '').trim().toLowerCase();
   const source = String(body.source || 'robotics-brief-download').trim();
@@ -34,21 +41,20 @@ export default async function handler(req, res) {
     return json(res, 400, { ok: false, error: 'invalid_email' });
   }
 
-  const { error } = await supabase
-    .from('leads')
-    .upsert(
-      [{ email, source, persona, interest, stage, ip_address, user_agent }],
-      { onConflict: 'email' }
-    );
+  const payload = [{ email, source, persona, interest, stage, ip_address, user_agent }];
+  const { error } = await supabase.from('leads').upsert(payload, { onConflict: 'email' });
 
   if (error) {
-    return json(res, 500, { ok: false, error: 'supabase_insert_failed', detail: error.message });
+    return json(res, 500, {
+      ok: false,
+      error: 'supabase_insert_failed',
+      detail: error.message
+    });
   }
 
   return json(res, 200, {
     ok: true,
-    thankYouUrl: '/brief-unlocked.html',
-    downloadUrl: '/robotics-brief.html',
-    premiumUrl: '/premium-robotics-brief.html'
+    thankYouUrl: '/robotics-brief.html',
+    downloadUrl: '/assets/pdf/robotics-brief-real.pdf'
   });
 }

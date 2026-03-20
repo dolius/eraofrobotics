@@ -20,9 +20,9 @@
     <section class="hero hero-split">
       <div class="hero-copy">
         <div class="pill">Free download</div>
-        <h1>Get the free robotics brief</h1>
+        <h1>Get the Free Robotics Brief That Shows What’s Real, What’s Hype, and Where the Next Big Wins May Be Hiding</h1>
         <p>This brief is for people who can already feel the robotics shift getting louder but do not want to dig through fifty tabs, ten keynote decks, and one LinkedIn prophet with a ring light to understand what matters.</p>
-        <p>It compresses the site’s main thesis into something faster: what changed, where the pressure is building first, which categories are commercially real, and where hype is still doing interpretive dance in front of revenue.</p>
+        <p>It compresses the site’s main thesis into something faster: what changed, where the pressure is building first, which categories are commercially real, and where hype is still outrunning real deployment.</p>
 
         <form class="lead-form" id="lead-form">
           <input type="email" id="email" name="email" placeholder="Enter your email for the brief" required />
@@ -34,7 +34,7 @@
             <option value="builder">I’m a builder / engineer</option>
           </select>
           <button class="btn" type="submit">Get the free brief</button>
-          <div class="fine">Enter your email and the site will unlock the downloadable robotics brief immediately, then point you to the smartest next step.</div>
+          <div class="fine">Enter your email and the site will unlock the robotics brief immediately.</div>
         </form>
         <div class="error" id="error-box"></div>
       </div>
@@ -42,7 +42,7 @@
     </section>
     <section class="grid grid-2-even section">
       <article class="card">
-        <h2>What the brief includes</h2>
+        <h2>Inside the Brief: The Forces, Sectors, and Signals That Matter Most Right Now</h2>
         <ol>
           <li><strong>The core shifts making robotics more viable now:</strong> AI, labor pressure, better hardware economics, and broader deployment appetite.</li>
           <li><strong>The sectors moving fastest:</strong> especially the categories where repetition, throughput, and labor pain are doing most of the adoption work.</li>
@@ -51,9 +51,9 @@
         </ol>
       </article>
       <article class="card">
-        <h2>Why this page matters</h2>
-        <p>Useful free assets are still one of the least stupid ways to earn trust on the internet. A good brief gives someone a reason to care before you ask them for attention, loyalty, money, or another precious slice of their browser life.</p>
-        <p>Later this can connect cleanly to email capture, paid reports, sponsorship, partnerships, or premium operator briefings. But even before any of that, it should stand on its own as a real piece of value rather than a hollow download bribe wearing a PDF hat.</p>
+        <h2>Why This Brief Matters If You Want a Clearer Read on Where Robotics Is Actually Headed</h2>
+        <p>A useful brief should save time, sharpen judgment, and give you a cleaner view of where the category is moving. That means less noise, fewer empty demos, and a better sense of which sectors are building real operational weight.</p>
+        <p>It is meant to be practical: a fast read that helps you understand the shift without pretending every robot video is the future arriving on schedule.</p>
       </article>
     </section>
   </div>
@@ -79,9 +79,9 @@ form.addEventListener('submit', async (e) => {
     });
     const data = await res.json();
     if (!res.ok || !data.ok) throw new Error(data.error || 'capture_failed');
-    window.location.href = data.thankYouUrl || '/brief-unlocked.html';
+    window.location.href = data.downloadUrl || '/assets/pdf/robotics-brief-real.pdf';
   } catch (err) {
-    errorBox.textContent = 'Could not capture your email yet. This frontier still needs the Vercel env vars and Supabase table wired correctly.';
+    errorBox.textContent = 'Could not capture your email yet. Double-check that the Vercel environment variables are added and that the Supabase leads table exists.';
     errorBox.style.display = 'block';
   }
 });

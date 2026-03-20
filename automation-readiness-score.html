@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Automation Readiness Score | Era of Robotics</title>
+  <meta name="description" content="Score whether a workflow is actually ready for robotics or automation based on repetition, structure, stability, and labor intensity." />
+  <link rel="stylesheet" href="global.css" />
+  <style>
+    .hero-media{background:url('generated-images/automation-readiness-visual.png') center/cover no-repeat}
+    input[type=range]{width:100%}
+    .result{background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.2)}
+  </style>
+</head>
+<body>
+<div class="wrap-narrow">
+  <div class="topnav"><a href="tools.html">← Back to tools</a></div>
+  <section class="hero hero-split">
+    <div class="hero-copy">
+      <div class="eyebrow">Decision tool</div>
+      <h1>Automation Readiness Score</h1>
+      <p>This tells you whether a workflow is actually a decent automation target, or whether someone just got overexcited after watching a robot demo on LinkedIn.</p>
+      <div class="button-row">
+        <a class="btn ghost" href="robotics-roi-calculator.html">Open ROI calculator</a>
+        <a class="btn ghost" href="weblord-protocol.html">See the protocol</a>
+      </div>
+    </div>
+    <div class="hero-media"></div>
+  </section>
+  <section class="grid grid-2-even section">
+    <article class="card">
+      <div class="grid grid-auto">
+        <div class="field"><label for="repeat">Repetition</label><input id="repeat" type="range" min="0" max="10" value="8" /></div>
+        <div class="field"><label for="structure">Structured inputs</label><input id="structure" type="range" min="0" max="10" value="7" /></div>
+        <div class="field"><label for="stability">Environment stability</label><input id="stability" type="range" min="0" max="10" value="6" /></div>
+        <div class="field"><label for="volume">Task volume</label><input id="volume" type="range" min="0" max="10" value="8" /></div>
+        <div class="field"><label for="labor">Labor pressure / cost</label><input id="labor" type="range" min="0" max="10" value="7" /></div>
+      </div>
+      <p style="margin-top:18px"><button class="btn" onclick="calc()">Score workflow</button></p>
+    </article>
+    <article class="card result">
+      <h2>Result</h2>
+      <div class="num" id="score">0/100</div>
+      <p id="verdict">Waiting for judgment.</p>
+    </article>
+  </section>
+  <section class="card section">
+    <h2>How to read it</h2>
+    <ul>
+      <li><strong>80–100:</strong> strong automation candidate</li>
+      <li><strong>60–79:</strong> worth serious exploration</li>
+      <li><strong>40–59:</strong> maybe, but reality may punch back</li>
+      <li><strong>Below 40:</strong> probably not the hill to deploy robots on yet</li>
+    </ul>
+  </section>
+</div>
+<script>
+function calc(){
+ const vals=['repeat','structure','stability','volume','labor'].map(id=>Number(document.getElementById(id).value));
+ const score=Math.round(vals.reduce((a,b)=>a+b,0)/50*100);
+ let verdict='';
+ if(score>=80) verdict='Strong candidate. This workflow is practically begging for a serious automation review.';
+ else if(score>=60) verdict='Promising. Not automatic glory, but definitely worth a closer look.';
+ else if(score>=40) verdict='Mixed bag. Possible, but the operational mess may be doing pushups in the corner.';
+ else verdict='Weak candidate. Save your budget before the robot budget eats it.';
+ document.getElementById('score').textContent=score + '/100';
+ document.getElementById('verdict').textContent=verdict;
+}
+calc();
+</script>
+</body>
+</html>

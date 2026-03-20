@@ -1,0 +1,43 @@
+ERA OF ROBOTICS — POSTING TARGETS
+Created: 2026-03-18 America/Vancouver
+
+PRIORITY PLATFORMS
+1. X / Twitter
+- robotics builders
+- AI hardware people
+- automation operators
+- future-of-work commentators
+
+2. LinkedIn
+- robotics founders
+- warehouse/logistics operators
+- automation consultants
+- investors following robotics/industrial tech
+
+3. Reddit
+Potentially relevant communities to evaluate before posting:
+- r/robotics
+- r/singularity
+- r/Futurology
+- r/MachineLearning (only if very relevant and not off-topic)
+- r/ArtificialInteligence or similar AI communities if tool/explainer fits
+- niche engineering / startup subs when appropriate
+
+4. Hacker News
+- only for substantial assets: calculators, maps, useful explainers, tools
+
+5. Indie Hackers
+- good for build-in-public, product angle, and monetization learnings
+
+OTHER OUTREACH TARGETS
+- robotics newsletters
+- AI hardware newsletters
+- startup curation newsletters
+- future-of-work writers
+- productivity / operator-focused curators when publishing a calculator
+
+POSTING RULES
+- Tailor the post to the platform.
+- Lead with usefulness, not self-congratulation.
+- Do not dump links everywhere.
+- If community rules are anti-promo, participate first or avoid posting.

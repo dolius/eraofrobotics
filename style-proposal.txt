@@ -1,0 +1,38 @@
+ERA OF ROBOTICS — STYLE PROPOSAL
+Created: 2026-03-18 America/Vancouver
+
+CORE STYLE DIRECTION
+- Cinematic tech editorial, not generic SaaS blandness.
+- Dark interface with electric blue / indigo glow accents.
+- Clean CSS Grid layouts with strong card structure.
+- Big headlines, calm supporting copy, high contrast, sharp spacing.
+- A design language that feels like intelligence, signal, and forward motion.
+
+VISUAL PRINCIPLES
+1. Use CSS Grid heavily for homepage modules, topic cards, and tool cards.
+2. Favor original gradients, subtle glows, and glassy dark panels.
+3. Keep type bold and readable; avoid cluttered futurist nonsense.
+4. Make tool pages look useful, not gimmicky.
+5. Each page should feel like part of one intelligent editorial system.
+
+COLOR SYSTEM
+- Background: deep navy / near-black
+- Primary accent: indigo-electric blue
+- Secondary accent: cyan
+- Optional success accent: green for actions or outputs
+- Text: soft off-white
+- Muted text: desaturated slate-blue
+
+PAGE TYPES TO SUPPORT
+- homepage / hub
+- explainers
+- downloadable funnels
+- tools / calculators
+- market maps
+- resource pages
+
+NEXT DESIGN MOVES
+- Add a dedicated tools hub page.
+- Add a calculator card grid on the homepage.
+- Standardize CTA blocks and section spacing.
+- Create one original calculator next.

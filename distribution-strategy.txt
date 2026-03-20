@@ -1,0 +1,111 @@
+ERA OF ROBOTICS — DISTRIBUTION & LINK-BUILDING STRATEGY
+Created: 2026-03-18 America/Vancouver
+
+MISSION
+Distribute Era of Robotics as a high-signal robotics media/property site by combining:
+- SEO-driven topic clusters
+- strategic distribution on relevant communities/platforms
+- asset-led link building
+- useful tools and downloadable resources that earn references naturally
+
+CORE PRINCIPLE
+Do not do dumb spam. Build assets worth referencing, then place them where the right people already gather.
+
+PRIMARY GROWTH CHANNELS
+1. SEO
+- Build content clusters around robotics explainers, market maps, tools, and resource pages.
+- Use internal linking aggressively and intelligently.
+- Create pages that are reference-worthy, not just news-chasing fluff.
+
+2. SOCIAL DISTRIBUTION
+- X / Twitter threads
+- LinkedIn posts for operator/investor angle
+- Reddit posts where genuinely relevant
+- Hacker News when an asset is substantial enough
+
+3. COMMUNITY / FORUM DISTRIBUTION
+- robotics-related subreddits
+- maker / engineering communities
+- AI / automation communities
+- startup and operator communities
+- niche Discord/Slack groups only when useful and non-spammy
+
+4. ASSET-LED LINK BUILDING
+- calculators
+- downloadable briefs
+- startup maps
+- comparison pages
+- resource pages
+These are the pages most likely to earn links.
+
+SEO STRATEGY
+PRIMARY CLUSTERS
+1. Robotics explainer cluster
+- why robotics matters now
+- robotics + AI convergence
+- industrial robotics vs humanoids vs service robots
+- where robotics is commercially viable first
+
+2. Tools and calculator cluster
+- robotics ROI calculator
+- automation readiness calculator
+- robot vs labor cost calculator
+- robotics learning path builder
+
+3. Resource / comparison cluster
+- best robotics resources
+- top robotics courses
+- robotics kits and platforms comparison
+- simulation software comparison
+
+4. Downloadable / lead magnet cluster
+- free robotics brief
+- sector reports
+- startup maps
+- buyer/operator guides
+
+INTERNAL LINKING RULES
+- Every page links to at least 2 related pages.
+- Tool pages link to downloadables and explainers.
+- Explainers link to tools and resource pages.
+- Download pages link back into the site, not just toward conversion.
+- Homepage links to the strongest money + utility assets.
+
+LINK BUILDING APPROACH
+1. Create reference-worthy pages first.
+2. Post them where the audience already exists.
+3. Reach out to relevant people with useful angles, not begging.
+4. Repackage the same insight into multiple distribution formats.
+
+ASSET TYPES THAT EARN LINKS
+- calculators
+- market maps
+- curated resource lists
+- original visuals
+- concise downloadable briefs
+- comparison pages with actual utility
+
+TARGET PLATFORMS
+High priority:
+- X / Twitter
+- LinkedIn
+- Reddit
+- Hacker News
+- Indie Hackers
+- relevant robotics/AI newsletters via outreach
+
+Secondary:
+- Medium canonical reposts if useful
+- Quora answers linking only when truly relevant
+- niche startup/future-of-work communities
+
+POSTING STRATEGY
+For each substantial asset:
+1. publish on site
+2. create 1 X post
+3. create 1 LinkedIn post
+4. create 1 Reddit-tailored summary if appropriate
+5. create 1 short outreach message to newsletter writers / curators
+
+ETHICAL RULE
+No fake persona farms. No comment spam. No garbage guest-post schemes. The site should grow by making genuinely useful things and distributing them well.

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Robotics ROI Calculator | Era of Robotics</title>
+  <meta name="description" content="Estimate the rough payback period and ROI of a robotics deployment using labor savings, maintenance, and deployment cost assumptions." />
+  <link rel="stylesheet" href="global.css" />
+  <style>
+    .hero-media{background:linear-gradient(180deg, rgba(7,11,20,0.08), rgba(7,11,20,0.22)), url('generated-images/robotics-roi-hero.png') center/cover no-repeat}
+    input{width:100%;padding:12px 14px;border-radius:14px;border:1px solid var(--border);background:#0b1222;color:var(--text);font:inherit}
+    label{display:block;font-weight:700;margin:0 0 8px}
+    .result{background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2)}
+  </style>
+</head>
+<body>
+  <div class="wrap-narrow">
+    <div class="topnav"><a href="tools.html">← Back to tools</a></div>
+
+    <section class="hero hero-split">
+      <div class="hero-copy">
+        <div class="eyebrow">Calculator</div>
+        <h1>Robotics ROI Calculator</h1>
+        <p>Very simple, deliberately blunt math for estimating whether a robotics deployment might pay back in a sane amount of time. Not finance-grade. Still useful.</p>
+        <div class="button-row">
+          <a class="btn ghost" href="robot-vs-human-cost.html">Compare robot vs human cost</a>
+          <a class="btn ghost" href="robotics-brief-download.html">Get the free brief</a>
+        </div>
+      </div>
+      <div class="hero-media"></div>
+    </section>
+
+    <section class="grid grid-2-even section">
+      <article class="card">
+        <div class="grid grid-auto">
+          <div><label for="labor">Annual labor cost replaced ($)</label><input id="labor" type="number" value="180000" /></div>
+          <div><label for="maintenance">Annual maintenance cost ($)</label><input id="maintenance" type="number" value="25000" /></div>
+          <div><label for="deploy">Upfront deployment cost ($)</label><input id="deploy" type="number" value="300000" /></div>
+          <div><label for="uptime">Expected uptime / productivity gain (%)</label><input id="uptime" type="number" value="10" /></div>
+        </div>
+        <p style="margin-top:18px"><button class="btn" onclick="calc()">Calculate</button></p>
+      </article>
+      <article class="card result">
+        <h2>Results</h2>
+        <div class="num" id="annual">$0</div>
+        <p>Estimated annual net benefit</p>
+        <div class="num" id="payback">0 years</div>
+        <p>Estimated payback period</p>
+        <div class="num" id="roi">0%</div>
+        <p>Estimated first-year ROI</p>
+      </article>
+    </section>
+
+    <section class="card section">
+      <h2>How this thinks</h2>
+      <ul>
+        <li>Annual net benefit = labor saved + productivity gain − maintenance</li>
+        <li>Payback period = deployment cost / annual net benefit</li>
+        <li>First-year ROI = (annual net benefit − deployment cost) / deployment cost</li>
+      </ul>
+    </section>
+
+    <section class="section grid grid-2-even">
+      <article class="card">
+        <div class="tag">Related tool</div>
+        <h2>Need a simpler side-by-side?</h2>
+        <p>The robot vs human cost page compares year-one robotics cost against annual human labor cost without pretending the world is a spreadsheet with good posture.</p>
+        <p><a href="robot-vs-human-cost.html">Open the comparison tool →</a></p>
+      </article>
+      <article class="card">
+        <div class="tag">Operational system</div>
+        <h2>See the publishing machine</h2>
+        <p>The WebLord protocol page documents how pages, visuals, distribution, and monetization fit together across the site.</p>
+        <p><a href="weblord-protocol.html">Open the WebLord protocol →</a></p>
+      </article>
+    </section>
+  </div>
+<script>
+function money(v){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(v)}
+function calc(){
+  const labor=Number(document.getElementById('labor').value)||0;
+  const maintenance=Number(document.getElementById('maintenance').value)||0;
+  const deploy=Number(document.getElementById('deploy').value)||0;
+  const uptimePct=(Number(document.getElementById('uptime').value)||0)/100;
+  const productivityGain=labor*uptimePct;
+  const annual=labor+productivityGain-maintenance;
+  const payback=annual>0?deploy/annual:0;
+  const roi=deploy>0?((annual-deploy)/deploy)*100:0;
+  document.getElementById('annual').textContent=money(annual);
+  document.getElementById('payback').textContent=annual>0?payback.toFixed(1)+' years':'No payback';
+  document.getElementById('roi').textContent=roi.toFixed(0)+'%';
+}
+calc();
+</script>
+</body>
+</html>

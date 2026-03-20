@@ -1,0 +1,30 @@
+ERA OF ROBOTICS — LINK BUILDING ASSETS
+Created: 2026-03-18 America/Vancouver
+
+ASSETS READY OR IN PROGRESS
+- Homepage
+- Robotics shift explainer
+- Free robotics brief page
+- Tools hub
+- Robotics ROI calculator
+- Original robotics visuals
+
+NEXT ASSETS TO BUILD FOR LINKS
+1. Automation Readiness Calculator
+2. Robot vs Human Cost Comparison page
+3. Best Robotics Resources page
+4. Robotics Startup Landscape page
+5. Humanoid Robotics Market Map page
+
+OUTREACH ANGLES
+- "Built a robotics ROI calculator for operators evaluating automation"
+- "Made a free robotics brief summarizing where the wave is actually building"
+- "Put together a practical robotics resource page for builders and operators"
+- "Mapped the main robotics categories and where commercial traction is forming"
+
+LINKABLE FORMATS
+- calculators
+- visual maps
+- concise reports
+- comparison pages
+- resource libraries

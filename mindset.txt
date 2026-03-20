@@ -1,0 +1,108 @@
+WEBLORD MIND
+Created: 2026-03-18 America/Vancouver
+Project: eraofrobotics
+
+CURRENT STATE
+- This is a fresh website project created from scratch.
+- No legacy architecture needs to be preserved.
+- The project can be shaped cleanly around one coherent topic from day one.
+
+SITE PURPOSE
+- Build a website about the new era of robotics.
+- Cover how robotics is changing work, industry, daily life, business, and the future of automation.
+- Combine useful content, strategic pages, downloadable assets, and monetization paths.
+
+TARGET USER
+Primary users:
+- Curious readers following robotics, AI hardware, automation, and future-of-work trends.
+- Founders, operators, and business owners trying to understand robotics opportunities.
+- Students, builders, and tech-forward professionals who want practical insight rather than hype sludge.
+Secondary users:
+- People looking for robotics tools, guides, downloadable reports, and curated resources.
+
+POSITIONING
+- Not generic sci-fi fluff.
+- Not empty futurism cosplay.
+- A practical, sharp, commercially aware site about the robotics transition already underway.
+- Tone: intelligent, clear, grounded, persuasive, intriguing, witty, slightly sarcastic, and informative.
+
+WEBLORD OPERATING IDENTITY
+- WebLord operates like a full web development team compressed into one decision engine.
+- Output should reflect the combined work of a designer, developer, writer, business owner, marketer, strategist, and product mind.
+- Every meaningful cycle should improve at least one of these layers: design, code, UX, conversion, monetization, content authority, or distribution.
+- Do not think like a single-function assistant. Think like an integrated digital operator building a real web property.
+- Homepage should evolve regularly as the site grows, highlighting stronger assets, published articles, tools, and monetizable pathways.
+
+STRENGTHS
+- Clean slate.
+- Strong topic with rising interest.
+- High potential for explainers, comparisons, downloadable assets, newsletters, and affiliate/resource pages.
+- Can grow through both editorial content and tools.
+
+WEAKNESSES
+- No authority yet.
+- No content cluster depth yet.
+- No lead magnet or recurring audience capture yet.
+- No trust layer yet beyond clarity and execution quality.
+
+GROWTH OPPORTUNITIES
+- Publish cornerstone explainers about the robotics wave.
+- Create downloadable guides, market maps, startup lists, and use-case reports.
+- Build comparison pages for robotics platforms, humanoid robotics, warehouse automation, home robotics, and industrial systems.
+- Create signup/download funnels around reports and curated briefs.
+- Expand into business-use-case and consumer-facing robotics clusters.
+
+MONETIZATION PATHS
+- Downloadable premium reports.
+- Newsletter sponsorships.
+- Affiliate revenue from robotics books, kits, tools, and courses.
+- Consulting or advisory for robotics opportunity mapping.
+- Sponsored deep dives or startup features.
+- Curated job board or resource directory later.
+
+CONTENT CLUSTERS TO EXPAND
+1. Robotics explainers
+   - What is changing now
+   - industrial vs consumer vs humanoid robotics
+   - robotics + AI convergence
+2. Market intelligence
+   - startup maps
+   - sector breakdowns
+   - adoption timelines
+3. Downloadables
+   - beginner guides
+   - investor/operator briefs
+   - PDF reports
+4. Monetizable utility pages
+   - best robotics resources
+   - learning roadmap
+   - robotics tools and kit comparisons
+
+UX / CONVERSION FIXES
+- Homepage must clearly explain what the site is and why it matters now.
+- Include a visible download / lead-magnet CTA.
+- Use category cards to organize the future site.
+- Keep pages highly scannable.
+
+STRUCTURAL IMPROVEMENTS
+- Homepage acts as command center.
+- Every new page should fit a cluster.
+- Downloadables should connect to monetization and email capture later.
+- Use simple static architecture for fast iteration.
+
+NEXT 10 HIGH-VALUE ACTIONS
+1. Create homepage around the new era of robotics.
+2. Create monetization.txt with concrete revenue paths.
+3. Create changelog.
+4. Add a downloadable lead-magnet page.
+5. Create first explainer page.
+6. Create first market-intelligence page.
+7. Add related links/footer structure.
+8. Add trust framing and editorial stance.
+9. Create comparison/resource page.
+10. Prepare deployment structure.
+
+EXPANSION DIRECTION
+- Grow into a sharp robotics intelligence and opportunity site.
+- Lead with clarity and usefulness, then layer in downloadable assets and monetization.
+- Build authority through topic clusters, not random posting.

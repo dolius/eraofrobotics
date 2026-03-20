@@ -1,0 +1,51 @@
+ERA OF ROBOTICS — PROMO COPY
+Created: 2026-03-18 America/Vancouver
+
+X / TWITTER POST 1
+The robotics era isn’t “coming soon.” It’s already leaking into logistics, manufacturing, service workflows, and AI tooling.
+
+I built a small site to track the shift with explainers, downloadable briefs, and practical tools.
+
+First tool: a Robotics ROI Calculator.
+
+[link]
+
+X / TWITTER POST 2
+A lot of robotics content online is either sci-fi worship or vague enterprise sludge.
+
+I wanted something sharper:
+- explainers
+- calculators
+- downloadable robotics briefs
+- practical market/use-case pages
+
+Built: Era of Robotics
+[link]
+
+LINKEDIN POST
+I’ve started building a site called Era of Robotics focused on the practical side of the robotics transition: what’s changing, where the real commercial movement is, and how to think about robotics as more than a flashy demo category.
+
+The site includes explainers, downloadable briefs, and utility pages like a robotics ROI calculator.
+
+If you’re interested in robotics, automation, future-of-work shifts, or AI-enabled hardware, here’s the project:
+[link]
+
+REDDIT-STYLE POST
+I built a small robotics-focused site because a lot of the discussion online feels split between hype and fragmented technical content.
+
+Goal is to make something more useful:
+- explainers on where robotics is actually moving
+- calculators/tools
+- downloadable briefs
+- eventually better resource/comparison pages
+
+Would love feedback on whether this is actually useful or where it should go next.
+[link]
+
+SHORT OUTREACH DM / EMAIL
+Hey — I’ve been building a project called Era of Robotics focused on practical robotics explainers, downloadable briefs, and simple utility pages like a robotics ROI calculator. Thought it might be relevant to your audience if you cover robotics, automation, AI hardware, or future-of-work themes.
+
+If helpful, I can send the strongest page directly.
+
+COMMENT SNIPPET FOR RELEVANT THREADS
+This is exactly the kind of thing I’ve been trying to track more practically. I put together a small site focused on robotics explainers, tools, and downloadable briefs instead of just hype commentary. Happy to share if useful.

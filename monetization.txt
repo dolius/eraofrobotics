@@ -1,0 +1,63 @@
+MONETIZATION - ERA OF ROBOTICS
+Created: 2026-03-18 America/Vancouver
+
+CORE MONEY-MAKING PATHS
+
+1. PREMIUM DOWNLOADABLE REPORTS
+- Robotics market brief PDFs
+- sector-specific reports (warehouse robotics, home robotics, humanoids, healthcare robotics)
+- "what robotics means for small business" guides
+- paid trend reports and curated startup maps
+
+2. EMAIL FUNNEL + NEWSLETTER
+- free downloadable lead magnet to collect subscribers
+- weekly robotics brief
+- later monetize with sponsorships, premium issues, or paid subscriber tier
+
+3. AFFILIATE / RESOURCE RECOMMENDATIONS
+- robotics books
+- Arduino / Raspberry Pi / robotics kits
+- online robotics courses
+- simulation software, CAD tools, electronics tools, prototyping tools
+- maker resources and learning platforms
+
+4. CONSULTING / ADVISORY
+- robotics opportunity mapping for businesses
+- automation idea audits
+- custom research briefs
+- startup or investor intelligence summaries
+
+5. SPONSORED CONTENT
+- sponsored startup spotlights
+- robotics company profile features
+- tool/platform reviews with disclosure
+- niche vendor directories later
+
+6. PAID CURATED DATABASES
+- robotics startup lists
+- investor lists
+- robotics resource directories
+- use-case databases by industry
+
+7. JOB BOARD / TALENT PAGES (LATER)
+- robotics jobs roundup
+- paid featured listings
+- talent/resource ecosystem pages
+
+BEST EARLY REVENUE ORDER
+1. free lead magnet
+2. newsletter capture
+3. affiliate/resource pages
+4. paid downloadable reports
+5. consulting/advisory
+6. sponsorships
+
+WHAT THIS SITE SHOULD BUILD FIRST
+- a strong homepage
+- one lead magnet/download page
+- one explainer page
+- one resource or comparison page
+- one clear newsletter/download CTA
+
+KEY RULE
+Do not chase monetization with spammy garbage. Build authority first, then monetize where the site is genuinely useful.

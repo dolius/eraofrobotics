@@ -1,0 +1,176 @@
+[2026-03-18 21:33 America/Vancouver]
+What changed:
+- Created a new website project: eraofrobotics.
+- Established the governing doctrine in weblord-mind.txt.
+- Created monetization.txt with concrete revenue paths.
+- Began site construction from a clean slate around the theme: the new era of robotics.
+
+Why it changed:
+- The project needed a coherent topic and a fresh build from scratch.
+- Robotics has strong content, tool, downloadable, and monetization potential.
+
+Expected value:
+- Clear subject focus from day one.
+- Better long-term authority and expansion potential.
+- Revenue paths defined early instead of bolted on later.
+
+Next likely moves:
+- Create the homepage.
+- Create the first downloadable/lead-magnet page.
+- Create the first explainer page.
+
+[2026-03-18 21:37 America/Vancouver]
+What changed:
+- Renamed the doctrine file from weblord-mind.txt to mindset.txt.
+- Added a style direction file: style-proposal.txt.
+- Created tools.html as the dedicated tools/calculators hub.
+- Created robotics-roi-calculator.html as the first live calculator.
+- Updated the homepage to include the tools layer.
+
+Why it changed:
+- The project needed the simpler governance file name you specified.
+- A useful site about robotics should include practical utilities, not just essays and downloadable promises.
+- The design needed a clearer style direction so the project develops with actual visual identity.
+
+Expected value:
+- Stronger brand/design coherence.
+- Better user usefulness.
+- More monetizable and shareable surface area.
+
+Next likely moves:
+- Add a second calculator or decision tool.
+- Create a better downloadable funnel with email capture placeholder logic.
+- Repoint the background cron from webbie to eraofrobotics.
+
+[2026-03-18 21:59 America/Vancouver]
+What changed:
+- Generated 3 additional original robotics visuals, bringing the current image set to 8.
+- Rebuilt the homepage to integrate the custom imagery directly into the design.
+- Upgraded the homepage layout into a more original CSS Grid-based editorial composition with a hero visual, feature block, and image mosaic.
+
+Why it changed:
+- The site needed stronger visual identity and immediate perceived value.
+- Original images are more powerful when they are structurally embedded into the homepage instead of sitting unused in a folder.
+
+Expected value:
+- Better first impression.
+- More distinctive brand feel.
+- Stronger visual coherence between the theme, content, and monetization strategy.
+
+Next likely moves:
+- Integrate images into the tools and download pages.
+- Build the second calculator.
+- Improve the downloadable funnel with a more premium conversion layout.
+
+[2026-03-18 22:03 America/Vancouver]
+What changed:
+- Created a full distribution and link-building strategy file.
+- Created posting targets and promo-copy assets for distribution.
+- Created a link-building asset inventory.
+- Built a first reference-style asset page designed to earn links and references.
+- Added the new reference asset into the homepage flow.
+
+Why it changed:
+- The site now needs traffic and authority systems, not just on-site design and content.
+- Distribution compounds the value of every useful page already being built.
+
+Expected value:
+- Better SEO planning.
+- Faster distribution once the site is live.
+- Stronger linkable asset strategy instead of random promotion.
+
+Next likely moves:
+- Build the second calculator and second major reference page.
+- Integrate original visuals into the download and tools pages.
+- Turn promo assets into platform-specific batches as the site grows.
+
+[2026-03-18 22:17 America/Vancouver]
+What changed:
+- Revised core site copy to inject more humor, wit, and memorable phrasing across the homepage, explainer page, tools page, and download page.
+- Shifted the voice closer to the requested persuasive / intriguing / slightly sarcastic style while keeping the information useful.
+
+Why it changed:
+- The site needs a sharper personality if it wants attention, recall, and shareability.
+- Informative is good; informative plus distinctive is better.
+
+Expected value:
+- Stronger brand voice.
+- Better retention and readability.
+- More memorable copy for visitors and distribution.
+
+Version 1 closure:
+- Background cron disabled.
+- Public-facing download now resolves to a real file.
+- Public-facing tools page no longer advertises unfinished placeholders.
+- Internal link check passed.
+
+[2026-03-18 22:20 America/Vancouver]
+What changed:
+- Closed version one into a self-contained system with no broken internal links.
+- Replaced the fake "coming soon" download with a real downloadable file.
+- Reframed unfinished tool concepts as present decision frameworks instead of dangling promises.
+- Disabled the active background cron per user request.
+
+Why it changed:
+- Version one needed to feel complete, trustworthy, and navigable end to end.
+- A site that looks half-finished leaks trust, attention, and momentum.
+
+Expected value:
+- Cleaner first impression.
+- No loose-end energy.
+- Safer handoff point for review, deployment, or the next controlled iteration.
+
+Version 1 status:
+- Closed and coherent.
+- Cron stopped.
+- Internal links verified.
+- Public-facing pages cleaned up.
+
+[2026-03-18 22:22 America/Vancouver]
+What changed:
+- Finished the tools section with three real linked pages instead of implied future work.
+- Added Automation Readiness Score, Robot vs Human Cost Comparison, and Robotics Learning Path Builder pages.
+- Updated tools.html so every major card now points to a real destination.
+
+Why it changed:
+- The tools section was overpromising and underdelivering.
+- Version one credibility depends on pages being real, linked, and usable end to end.
+
+Expected value:
+- Better trust.
+- Better usefulness.
+- Stronger internal linking and distribution potential.
+
+Version 1 status:
+- Tools now operational.
+- No fake tool placeholders in the main tools flow.
+
+[2026-03-18 22:32 America/Vancouver]
+What changed:
+- Increased typography scale with clamp-based sizing for better readability and responsiveness.
+- Wired newly generated visuals into the matching tool, resource, and download pages.
+- Upgraded secondary pages from text-heavy utility layouts into stronger visual/editorial compositions.
+
+Why it changed:
+- The site needed bigger, more confident typography and more visual continuity beyond the homepage.
+- Page-specific imagery helps each page feel designed, intentional, and on-brand.
+
+Expected value:
+- Better readability.
+- Stronger perceived quality.
+- More consistent visual identity across the site.
+
+[2026-03-18 22:35 America/Vancouver]
+What changed:
+- Created a shared global.css file for the site-wide design system.
+- Began refactoring pages to rely on shared styles instead of repeating giant in-page CSS blocks.
+- Moved homepage and tools page onto the shared stylesheet first.
+
+Why it changed:
+- Repeated page-level CSS creates maintenance sludge fast.
+- A shared design system makes the site easier to evolve without editing the same styling logic in five places.
+
+Expected value:
+- Cleaner maintenance.
+- More consistent styling.
+- Faster future page development with fewer duplicated styles.

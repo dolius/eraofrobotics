@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Era of Robotics — Free Robotics Brief</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #4338ca;
+      --accent2: #0891b2;
+      --border: #dbe4f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    .page {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 36px 56px;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #e0e7ff;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    h1, h2, h3 { line-height: 1.05; margin: 0 0 14px; }
+    h1 { font-size: 42px; }
+    h2 { font-size: 28px; margin-top: 10px; }
+    p, li { font-size: 16px; }
+    p { margin: 0 0 14px; color: var(--muted); }
+    .hero {
+      padding-bottom: 26px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 28px;
+    }
+    .hero-grid,
+    .image-row,
+    .two-col {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      border-spacing: 16px 0;
+    }
+    .col {
+      display: table-cell;
+      vertical-align: top;
+    }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      margin-top: 18px;
+      page-break-inside: avoid;
+    }
+    .img {
+      width: 100%;
+      border-radius: 18px;
+      display: block;
+    }
+    ul, ol { margin: 0; padding-left: 22px; }
+    li { margin-bottom: 10px; color: var(--muted); }
+    .quote {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 18px 0;
+    }
+    .footer {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: #64748b;
+      font-size: 13px;
+    }
+    @media print {
+      .page { padding: 24px 20px 36px; }
+      h1 { font-size: 36px; }
+      h2 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <div class="eyebrow">Era of Robotics — Free Brief</div>
+      <div class="hero-grid">
+        <div class="col" style="width:58%">
+          <h1>The robotics era is here. Cute if you thought it would ask permission.</h1>
+          <p>This brief is the fast, useful version of what people actually need to know about robotics right now: what’s changing, where the money is forming, what’s hype, and what builders, operators, and investors should actually pay attention to.</p>
+          <p>No incense-cloud futurism. No keynote-voice nonsense. Just the shift, the pressure, and the openings.</p>
+          <div class="quote">Robotics stopped being just a cool demo category. It’s becoming an economic one.</div>
+        </div>
+        <div class="col" style="width:42%">
+          <img class="img" src="generated-images/free-brief-cover-visual.png" alt="Robotics brief cover visual" />
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>1. Why robotics matters now</h2>
+      <div class="two-col">
+        <div class="col" style="width:58%">
+          <ul>
+            <li>AI is making machines less rigid and more commercially useful.</li>
+            <li>Labor pressure is making automation economically attractive in more industries.</li>
+            <li>Hardware, sensors, and software tooling are stacking in the same direction instead of showing up to the party one decade apart.</li>
+            <li>The conversation is shifting from technical novelty to operational payoff.</li>
+          </ul>
+        </div>
+        <div class="col" style="width:42%">
+          <img class="img" src="generated-images/robotics-newsroom.png" alt="Robotics newsroom visual" />
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>2. The sectors moving fastest</h2>
+      <div class="image-row">
+        <div class="col">
+          <img class="img" src="generated-images/warehouse-automation-grid.png" alt="Warehouse automation visual" />
+          <p><strong>Warehousing & logistics:</strong> one of the cleanest commercial pathways because throughput, repetition, and labor pressure are all obvious.</p>
+        </div>
+        <div class="col">
+          <img class="img" src="generated-images/human-robot-collaboration.png" alt="Human robot collaboration visual" />
+          <p><strong>Human + robot workflows:</strong> collaboration will often beat full replacement, especially in messy real-world environments.</p>
+        </div>
+      </div>
+      <ul>
+        <li>Warehousing and fulfillment</li>
+        <li>Industrial automation upgrades</li>
+        <li>Healthcare and service robotics</li>
+        <li>AI-enabled machine tooling</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>3. Where hype outruns reality</h2>
+      <div class="two-col">
+        <div class="col" style="width:42%">
+          <img class="img" src="generated-images/robotics-market-map.png" alt="Robotics market map visual" />
+        </div>
+        <div class="col" style="width:58%">
+          <ul>
+            <li>Humanoids get attention faster than they get repeatable deployment density.</li>
+            <li>“The future of everything” is usually less bankable than one painfully useful wedge use case.</li>
+            <li>Demo videos can make a category look mature long before field reliability agrees.</li>
+            <li>If the economics require interpretive dance to explain, it probably isn’t ready yet.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>4. What to watch next</h2>
+      <div class="two-col">
+        <div class="col" style="width:58%">
+          <ol>
+            <li>Deployment density in real workflows</li>
+            <li>Clearer ROI narratives tied to labor and throughput</li>
+            <li>Tooling that makes robotics easier to build, simulate, and integrate</li>
+            <li>Education and operator resources that help people stop guessing</li>
+          </ol>
+        </div>
+        <div class="col" style="width:42%">
+          <img class="img" src="generated-images/robotics-tools-interface.png" alt="Robotics tools interface visual" />
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      Era of Robotics · Version 1 brief · Built from the site’s own content and visual system so the downloadable asset actually looks like it belongs to the same organism.
+    </section>
+  </div>
+</body>
+</html>

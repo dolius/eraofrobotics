@@ -1,0 +1,11 @@
+.env.local
+.env*
+!.env.example
+__pycache__/
+*.pyc
+.DS_Store
+data/
+demo-screens/
+generated-videos/
+audio-articles/audio/
+*.sqlite3

@@ -2,7 +2,7 @@
 What changed:
 - Created a new website project: eraofrobotics.
 - Established the governing doctrine in weblord-mind.txt.
-- Created monetization.txt with concrete revenue paths.
+- Created content/strategy/monetization.txt with concrete revenue paths.
 - Began site construction from a clean slate around the theme: the new era of robotics.
 
 Why it changed:
@@ -21,7 +21,7 @@ Next likely moves:
 
 [2026-03-18 21:37 America/Vancouver]
 What changed:
-- Renamed the doctrine file from weblord-mind.txt to mindset.txt.
+- Renamed the doctrine file from weblord-mind.txt to content/strategy/mindset.txt.
 - Added a style direction file: style-proposal.txt.
 - Created tools.html as the dedicated tools/calculators hub.
 - Created robotics-roi-calculator.html as the first live calculator.

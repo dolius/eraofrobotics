@@ -1,6 +1,6 @@
 Video generator status
 - Local static-image montage pipeline is working.
-- Confirmed output: generated-videos/eraofrobotics-test-montage.mp4
+- Confirmed output: output/generated-videos/eraofrobotics-test-montage.mp4
 - Uses the workspace Python environment and MoviePy.
 - ffmpeg is available through the Python stack via imageio_ffmpeg, so system-level Homebrew ffmpeg is optional for this workflow.
 

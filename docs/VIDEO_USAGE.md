@@ -11,8 +11,8 @@ The script:
 - exports an MP4
 
 ## Files
-- `generate_video_from_images.py` — image-to-video generator
-- output folder: `generated-videos/`
+- `scripts/generate_video_from_images.py` — image-to-video generator
+- output folder: `output/generated-videos/`
 
 ## Requirements
 - workspace virtualenv: `../.venv/bin/python`
@@ -24,8 +24,8 @@ You do **not** need a separately installed system `ffmpeg` binary for the curren
 ## Example
 ```bash
 cd /Users/demo/.openclaw/workspace/eraofrobotics
-../.venv/bin/python generate_video_from_images.py generated-images \
-  --output generated-videos/eraofrobotics-montage.mp4 \
+../.venv/bin/python scripts/generate_video_from_images.py generated-images \
+  --output output/generated-videos/eraofrobotics-montage.mp4 \
   --seconds-per-image 2.8 \
   --fps 24 \
   --width 1280 \
@@ -39,9 +39,9 @@ cd /Users/demo/.openclaw/workspace/eraofrobotics
 - short editorial montages
 
 ## Verified outputs created in this workspace
-- `generated-videos/eraofrobotics-vertical-social.mp4` — 1080x1920 with audio
-- `generated-videos/eraofrobotics-landscape-promo.mp4` — 1280x720 with audio
-- `generated-videos/eraofrobotics-homepage-loop.mp4` — 1600x900 without audio
+- `output/generated-videos/eraofrobotics-vertical-social.mp4` — 1080x1920 with audio
+- `output/generated-videos/eraofrobotics-landscape-promo.mp4` — 1280x720 with audio
+- `output/generated-videos/eraofrobotics-homepage-loop.mp4` — 1600x900 without audio
 
 ## Notes
 - This is not Sora video generation. It is a local montage generator from static images.

@@ -4,8 +4,8 @@
 __pycache__/
 *.pyc
 .DS_Store
-data/
+data/*.sqlite3
 demo-screens/
-generated-videos/
-audio-articles/audio/
+output/generated-videos/
+output/audio-articles/audio/
 *.sqlite3

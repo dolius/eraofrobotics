@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'email-sequence-pages'
 OUT.mkdir(parents=True, exist_ok=True)
 

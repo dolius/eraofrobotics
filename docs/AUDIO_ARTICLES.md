@@ -3,14 +3,14 @@
 This site can generate article + audio pairs from a single queue file.
 
 ## Files
-- `audibles.md` — queued audio article topics
-- `make_audio_article.py` — single-file generator
+- `data/audibles.md` — queued audio article topics
+- `scripts/make_audio_article.py` — single-file generator
 - output markdown articles → `audio-articles/`
 - output mp3 files → `audio-articles/audio/`
 - output HTML snippets → `audio-articles/snippets/`
 
 ## What the script does
-1. reads one or more jobs from `audibles.md`
+1. reads one or more jobs from `data/audibles.md`
 2. uses the OpenAI API to generate article text
 3. writes the article as markdown
 4. converts the article to MP3 using free TTS via `gTTS`
@@ -30,12 +30,12 @@ export OPENAI_API_KEY=your_key_here
 
 Run one article:
 ```bash
-../.venv/bin/python make_audio_article.py --limit 1
+../.venv/bin/python scripts/make_audio_article.py --limit 1
 ```
 
 Run a specific slug:
 ```bash
-../.venv/bin/python make_audio_article.py --slug warehouse-robotics-wedge
+../.venv/bin/python scripts/make_audio_article.py --slug warehouse-robotics-wedge
 ```
 
 ## Notes

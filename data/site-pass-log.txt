@@ -26,7 +26,7 @@ Pass 4
 - Improved homepage pathways into explainer, tools, brief, and protocol.
 
 Pass 5
-- Added README-WEBLORD-AI.md for future AI contributors.
+- Added docs/README-WEBLORD-AI.md for future AI contributors.
 - Switched image-generation execution to the workspace virtualenv.
 - Triggered generation for dedicated shift + ROI hero images.
 - Linked the protocol page to the AI handoff and pass log.
@@ -44,17 +44,17 @@ Pass 8
 - Wired the new generated images into robotics-shift-guide.html and robotics-roi-calculator.html.
 
 Pass 9
-- Updated IMAGE_USAGE.md to reflect the correct workspace-venv workflow.
+- Updated docs/IMAGE_USAGE.md to reflect the correct workspace-venv workflow.
 - Documented the environment constraint so future image generation does not fail on system Python.
 
 Pass 10
-- Added a clearer stop-state and next-step guidance to README-WEBLORD-AI.md.
+- Added a clearer stop-state and next-step guidance to docs/README-WEBLORD-AI.md.
 - Closed the first 10-pass run with documentation aimed at reducing future thrash.
 
 Pass 11
 - Began a new 5-pass run focused on static-image video generation.
-- Added generate_video_from_images.py, VIDEO_USAGE.md, and video-prompts.txt.
-- Extended README-WEBLORD-AI.md to include the new video layer.
+- Added scripts/generate_video_from_images.py, docs/VIDEO_USAGE.md, and data/video-prompts.txt.
+- Extended docs/README-WEBLORD-AI.md to include the new video layer.
 
 Pass 12
 - Discovered the Python stack already included an ffmpeg-capable path via imageio_ffmpeg.
@@ -62,19 +62,19 @@ Pass 12
 - Patched the video workflow to use the environment that already works.
 
 Pass 13
-- Updated generate_video_from_images.py to match the installed MoviePy API.
+- Updated scripts/generate_video_from_images.py to match the installed MoviePy API.
 - Removed fragile assumptions and stabilized the first reliable MP4 export path.
 
 Pass 14
-- Successfully rendered generated-videos/eraofrobotics-test-montage.mp4 from static site images.
+- Successfully rendered output/generated-videos/eraofrobotics-test-montage.mp4 from static site images.
 - Verified the local image-to-video generator works end-to-end.
 
 Pass 15
-- Updated VIDEO_USAGE.md to reflect the actual ffmpeg dependency path.
+- Updated docs/VIDEO_USAGE.md to reflect the actual ffmpeg dependency path.
 - Added additional video status notes for future AI/human contributors.
 
 Pass 16
-- Upgraded generate_video_from_images.py to support output presets and optional audio mixing.
+- Upgraded scripts/generate_video_from_images.py to support output presets and optional audio mixing.
 - Added timed fade-in/fade-out support for music beds on promo exports.
 
 Pass 17
@@ -91,4 +91,4 @@ Pass 19
 
 Pass 20
 - Verified output dimensions, durations, and audio presence on all three final videos.
-- Updated VIDEO_USAGE.md and README-WEBLORD-AI.md with the new tested video state.
+- Updated docs/VIDEO_USAGE.md and docs/README-WEBLORD-AI.md with the new tested video state.

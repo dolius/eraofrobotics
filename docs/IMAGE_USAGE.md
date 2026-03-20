@@ -8,7 +8,7 @@
 ## Recommended usage
 ```bash
 cd /Users/demo/.openclaw/workspace/eraofrobotics
-OPENAI_API_KEY=your_key_here ../.venv/bin/python generate_images.py "A cinematic editorial robotics lab scene" --outdir generated-images --name robotics-lab-hero
+OPENAI_API_KEY=your_key_here ../.venv/bin/python scripts/generate_images.py "A cinematic editorial robotics lab scene" --outdir generated-images --name robotics-lab-hero
 ```
 
 ## Why use the workspace venv
@@ -16,10 +16,10 @@ The system Python on this machine may be externally managed and reject direct pa
 
 ## Output
 Images will be saved into the chosen output directory, e.g.:
-- `generated-images/robotics-lab-hero.png`
+- `assets/images/robotics-lab-hero.png`
 
 ## Notes
 - Default model in the script: `gpt-image-1`
-- Update prompts in `image-prompts.txt`
+- Update prompts in `data/image-prompts.txt`
 - Good target uses: homepage hero images, tools page visuals, downloadable covers
 - Prefer grounded editorial prompts over generic shiny-future sludge

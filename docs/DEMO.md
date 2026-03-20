@@ -1,7 +1,7 @@
 # Demo walkthrough
 
 ## What this gives you
-- a real PDF brief: `robotics-brief-real.pdf`
+- a real PDF brief: `assets/pdf/robotics-brief-real.pdf`
 - a local site demo server on port 8000
 - the lead capture server on port 8765
 - a Safari Selenium walkthrough script with screenshots
@@ -15,13 +15,13 @@ cd /Users/demo/.openclaw/workspace/eraofrobotics
 ## Run the lead capture server
 ```bash
 cd /Users/demo/.openclaw/workspace/eraofrobotics
-../.venv/bin/python lead_capture_server.py
+../.venv/bin/python scripts/lead_capture_server.py
 ```
 
 ## Run the walkthrough
 ```bash
 cd /Users/demo/.openclaw/workspace/eraofrobotics
-../.venv/bin/python demo_walkthrough.py
+../.venv/bin/python scripts/demo_walkthrough.py
 ```
 
 ## Safari note

@@ -11,7 +11,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = ROOT / 'data' / 'leads.sqlite3'
 BRIEF_PATH = ROOT / 'robotics-brief.html'
 THANK_YOU_PATH = ROOT / 'brief-unlocked.html'

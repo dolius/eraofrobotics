@@ -3,7 +3,7 @@
 Single-file audio article agent for Era of Robotics.
 
 What it does:
-- reads audibles.md for article jobs
+- reads data/audibles.md for article jobs
 - generates article text with the OpenAI API
 - writes markdown article files
 - converts article text to MP3 using a free TTS service (gTTS)
@@ -26,11 +26,11 @@ from typing import List
 from openai import OpenAI
 from gtts import gTTS
 
-ROOT = Path(__file__).resolve().parent
-AUDIBLES_MD = ROOT / "audibles.md"
-OUTPUT_MD_DIR = ROOT / "audio-articles"
-OUTPUT_MP3_DIR = ROOT / "audio-articles" / "audio"
-OUTPUT_SNIPPET_DIR = ROOT / "audio-articles" / "snippets"
+ROOT = Path(__file__).resolve().parent.parent
+AUDIBLES_MD = ROOT / "data/audibles.md"
+OUTPUT_MD_DIR = ROOT / "output/audio-articles"
+OUTPUT_MP3_DIR = ROOT / "output/audio-articles" / "audio"
+OUTPUT_SNIPPET_DIR = ROOT / "output/audio-articles" / "snippets"
 
 
 @dataclass
@@ -150,8 +150,8 @@ def load_jobs() -> List[AudibleJob]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Generate audio articles from audibles.md")
-    parser.add_argument("--slug", help="Run only one slug from audibles.md")
+    parser = argparse.ArgumentParser(description="Generate audio articles from data/audibles.md")
+    parser.add_argument("--slug", help="Run only one slug from data/audibles.md")
     parser.add_argument("--limit", type=int, default=1, help="How many todo jobs to process")
     args = parser.parse_args()
 

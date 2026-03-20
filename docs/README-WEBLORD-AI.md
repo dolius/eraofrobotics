@@ -21,12 +21,12 @@ The goal is not just to make pages. The goal is to strengthen the organism.
 
 ## Source-of-truth files
 Read these first before making major changes:
-- `mindset.txt` — doctrine / operating identity
+- `content/strategy/mindset.txt` — doctrine / operating identity
 - `weblord-changelog.txt` — prior build history
-- `distribution-strategy.txt` — growth/distribution logic
-- `monetization.txt` — monetization logic
-- `image-prompts.txt` — image generation prompts
-- `site-pass-log.txt` — current pass-by-pass execution log
+- `content/strategy/distribution-strategy.txt` — growth/distribution logic
+- `content/strategy/monetization.txt` — monetization logic
+- `data/image-prompts.txt` — image generation prompts
+- `data/site-pass-log.txt` — current pass-by-pass execution log
 
 ## Current architecture
 Main public pages:
@@ -45,14 +45,14 @@ Shared styling:
 - `global.css`
 
 Images:
-- `generated-images/`
-- `generate_images.py`
+- `assets/images/`
+- `scripts/generate_images.py`
 
 Video:
-- `generated-videos/`
-- `generate_video_from_images.py`
-- `VIDEO_USAGE.md`
-- `video-prompts.txt`
+- `output/generated-videos/`
+- `scripts/generate_video_from_images.py`
+- `docs/VIDEO_USAGE.md`
+- `data/video-prompts.txt`
 
 ## Non-negotiable operating rules
 1. Every meaningful pass must improve at least one of:
@@ -86,14 +86,14 @@ Video:
 Use the local Python generator:
 ```bash
 cd /Users/demo/.openclaw/workspace/eraofrobotics
-OPENAI_API_KEY=... python3 generate_images.py "your prompt" --outdir generated-images --name your-image-name
+OPENAI_API_KEY=... python3 scripts/generate_images.py "your prompt" --outdir generated-images --name your-image-name
 ```
 
 Rules:
 - prefer grounded editorial prompts
 - no text inside generated images
 - each important page should have a deliberate visual identity
-- if no API key is available, queue prompts in `image-prompts.txt`
+- if no API key is available, queue prompts in `data/image-prompts.txt`
 
 ## What to improve next
 Good next moves usually include:
@@ -133,7 +133,7 @@ When doing iterative work:
 1. inspect the current pages
 2. choose a narrow but valuable pass
 3. implement real improvements
-4. update `site-pass-log.txt`
+4. update `data/site-pass-log.txt`
 5. if helpful, update `weblord-changelog.txt`
 
 ## What “done” means for a pass

@@ -70,7 +70,7 @@ def build_audio(audio_path: str | None, target_duration: float, fade_in: float, 
 def main():
     parser = argparse.ArgumentParser(description='Generate a simple video from static images.')
     parser.add_argument('inputs', nargs='+', help='Image files and/or directories')
-    parser.add_argument('--output', default='generated-videos/robotics-montage.mp4', help='Output video file')
+    parser.add_argument('--output', default='output/generated-videos/robotics-montage.mp4', help='Output video file')
     parser.add_argument('--seconds-per-image', type=float, default=3.0, help='Duration for each image')
     parser.add_argument('--fps', type=int, default=24, help='Frames per second')
     parser.add_argument('--preset', choices=sorted(PRESETS.keys()), default='landscape', help='Output size preset')

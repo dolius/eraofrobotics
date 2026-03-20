@@ -6,8 +6,8 @@ from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import inch
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, ListFlowable, ListItem
 
-ROOT = Path(__file__).resolve().parent
-OUT = ROOT / 'robotics-brief-real.pdf'
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / 'assets/pdf/robotics-brief-real.pdf'
 
 styles = getSampleStyleSheet()
 styles.add(ParagraphStyle(name='Hero', fontName='Helvetica-Bold', fontSize=22, leading=28, textColor=colors.HexColor('#0f172a'), spaceAfter=14))

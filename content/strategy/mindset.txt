@@ -92,7 +92,7 @@ STRUCTURAL IMPROVEMENTS
 
 NEXT 10 HIGH-VALUE ACTIONS
 1. Create homepage around the new era of robotics.
-2. Create monetization.txt with concrete revenue paths.
+2. Create content/strategy/monetization.txt with concrete revenue paths.
 3. Create changelog.
 4. Add a downloadable lead-magnet page.
 5. Create first explainer page.

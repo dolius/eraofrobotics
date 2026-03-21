@@ -9,78 +9,70 @@
   <style>
     .hero-media{background:url('assets/images/free-brief-cover-visual.png') center/cover no-repeat}
     .lead-form{display:grid;gap:12px;margin-top:18px}
-    .lead-form input,.lead-form select{width:100%;padding:14px 16px;border-radius:14px;border:1px solid var(--border);background:#0b1222;color:var(--text);font:inherit}
+    .lead-form input,.lead-form select{width:100%;padding:14px 16px;border-radius:0;border:1px solid var(--line);background:#111;color:#fff;font:inherit}
     .fine{font-size:.92rem;color:#cbd5e1}
-    .error{display:none;margin-top:14px;padding:14px 16px;border-radius:14px;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.25);color:#fecaca}
-    .benefit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-    @media (max-width:900px){.benefit-grid{grid-template-columns:1fr}}
+    .error{display:none;margin-top:14px;padding:14px 16px;border-radius:0;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.25);color:#fecaca}
+    .report-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;margin-top:2rem}
+    .report-meta .card{padding:1.25rem}
+    @media (max-width:900px){.report-meta{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <div class="wrap-narrow">
-    <div class="topnav"><a href="/index.html">← Back to Era of Robotics home</a></div>
+    <div class="topnav"><a href="/briefs.html">← Back to reports</a></div>
+
     <section class="hero hero-split">
       <div class="hero-copy">
-        <div class="pill">Free download</div>
-        <h1>Get the Free Robotics Brief if you want the shortest useful way to understand what is happening in the industry.</h1>
-        <p>This page is for visitors who want the compressed version. Instead of reading every page first, you can grab one briefing that explains the major shifts, the strongest sectors, and where hype is still outrunning real deployment.</p>
-        <p>It is the fastest useful entry point on the site.</p>
-
-        <form class="lead-form" id="lead-form">
-          <input type="email" id="email" name="email" placeholder="Enter your email for the brief" required />
-          <select id="persona" name="persona">
-            <option value="general">I’m browsing the category</option>
-            <option value="operator">I’m an operator / buyer</option>
-            <option value="founder">I’m a founder</option>
-            <option value="investor">I’m an investor</option>
-            <option value="builder">I’m a builder / engineer</option>
-          </select>
-          <button class="btn" type="submit">Get the free brief</button>
-          <div class="fine">Enter your email and the site will unlock the robotics brief immediately.</div>
-        </form>
-        <div class="error" id="error-box"></div>
+        <div class="eyebrow">Flagship Brief</div>
+        <h1>The free robotics brief for people who want the signal before the whole market gets louder and dumber.</h1>
+        <p class="section-intro">A concise field briefing on what changed, which sectors matter, and where the strongest real-world traction is starting to form.</p>
+        <p>This is the best entry-point report on the site. It is built for readers who want the shortest useful route to the category before they go deeper into tools, reports, or market-specific analysis.</p>
+        <div class="button-row">
+          <a class="btn" href="/assets/pdf/robotics-brief-real.pdf">Preview PDF</a>
+          <a class="btn ghost" href="/robotics-shift-guide.html">Read explainer first</a>
+        </div>
+        <div class="report-meta">
+          <div class="card"><div class="tag">Format</div><strong>HTML + PDF</strong><p>Readable online, downloadable as a brief.</p></div>
+          <div class="card"><div class="tag">Best for</div><strong>Operators, founders, investors</strong><p>Anyone who needs the category in one clean read.</p></div>
+          <div class="card"><div class="tag">Use case</div><strong>Fast orientation</strong><p>Get the thesis before exploring tools and deeper reports.</p></div>
+        </div>
       </div>
       <div class="hero-media"></div>
     </section>
 
-    <section class="section">
-      <div class="tag">What you get</div>
-      <h2>What this brief is meant to do for you</h2>
-      <div class="benefit-grid">
-        <article class="card">
-          <h3>Get the category fast</h3>
-          <p>If the robotics wave feels important but fuzzy, the brief gives you the shortest useful picture of why the category matters now.</p>
-        </article>
-        <article class="card">
-          <h3>See what is actually moving</h3>
-          <p>It points to the sectors and signals that look commercially stronger instead of treating every dramatic demo like a market breakthrough.</p>
-        </article>
-        <article class="card">
-          <h3>Save time</h3>
-          <p>It condenses the main ideas so you can get oriented before you spend hours wandering through articles, threads, and tab chaos.</p>
-        </article>
-        <article class="card">
-          <h3>Know where to go next</h3>
-          <p>Once you have the brief, you will know whether the next best move is the explainer, the tools, or the resources page.</p>
-        </article>
+    <section class="template-section">
+      <div class="template-number">01</div>
+      <div class="template-header">
+        <h2 class="template-title">What you get when you download it.</h2>
+        <p class="section-intro">This is not meant to be fluff. It is meant to save time, sharpen judgment, and leave you with a better sense of where robotics is becoming commercially serious.</p>
+      </div>
+      <div class="grid grid-auto">
+        <article class="card"><div class="service-number">01</div><h3>The core shifts making robotics more viable now</h3><p>AI, labor pressure, better hardware economics, and broader deployment appetite — framed in plain language.</p></article>
+        <article class="card"><div class="service-number">02</div><h3>The sectors moving fastest</h3><p>A cleaner look at the categories where repetition, throughput, and labor pain are doing most of the adoption work.</p></article>
+        <article class="card"><div class="service-number">03</div><h3>Where hype outruns reality</h3><p>A filter for separating polished demos and category theater from real deployment signal.</p></article>
+        <article class="card"><div class="service-number">04</div><h3>What serious readers should watch next</h3><p>The builders, operators, and investors lens on what matters after the first read-through.</p></article>
       </div>
     </section>
 
-    <section class="grid grid-2-even section">
-      <article class="card">
-        <h2>Inside the Brief: The Forces, Sectors, and Signals That Matter Most Right Now</h2>
-        <ol>
-          <li><strong>The core shifts making robotics more viable now:</strong> AI, labor pressure, better hardware economics, and broader deployment appetite.</li>
-          <li><strong>The sectors moving fastest:</strong> especially the categories where repetition, throughput, and labor pain are doing most of the adoption work.</li>
-          <li><strong>Where hype is outrunning reality:</strong> because demo density and deployment density are not the same thing.</li>
-          <li><strong>What builders, operators, and investors should watch:</strong> not just which robots look cool, but which markets are becoming commercially legible.</li>
-        </ol>
-      </article>
-      <article class="card">
-        <h2>What to do after you read it</h2>
-        <p>If the brief gives you the broad picture, the next best move depends on your question. Read the explainer if you want more context, use the tools if you want to evaluate a use case, or go to the resources page if you want a better field map.</p>
-        <p><a href="/robotics-shift-guide.html">Read the explainer →</a> · <a href="/tools.html">Use the tools →</a> · <a href="/reference-asset-page.html">Browse resources →</a></p>
-      </article>
+    <section class="template-section">
+      <div class="template-number">02</div>
+      <div class="template-header">
+        <h2 class="template-title">Unlock the brief.</h2>
+        <p class="section-intro">Get the PDF, keep the shorter version, and use it as the fast orientation layer before moving into tools or deeper reports.</p>
+      </div>
+      <form class="lead-form card" id="lead-form">
+        <input type="email" id="email" name="email" placeholder="Enter your email for the brief" required />
+        <select id="persona" name="persona">
+          <option value="general">I’m browsing the category</option>
+          <option value="operator">I’m an operator / buyer</option>
+          <option value="founder">I’m a founder</option>
+          <option value="investor">I’m an investor</option>
+          <option value="builder">I’m a builder / engineer</option>
+        </select>
+        <button class="btn" type="submit">Get the Free Brief</button>
+        <div class="fine">Enter your email and the PDF unlocks immediately.</div>
+        <div class="error" id="error-box"></div>
+      </form>
     </section>
   </div>
 <script>
@@ -95,13 +87,7 @@ form.addEventListener('submit', async (e) => {
     const res = await fetch('/api/capture-lead', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        email,
-        persona,
-        source: 'robotics-brief-download',
-        interest: 'robotics-brief',
-        stage: 'brief-captured'
-      })
+      body: JSON.stringify({ email, persona, source: 'robotics-brief-download', interest: 'robotics-brief', stage: 'brief-captured' })
     });
     const data = await res.json();
     if (!res.ok || !data.ok) throw new Error(data.error || 'capture_failed');

@@ -23,7 +23,7 @@ You do **not** need a separately installed system `ffmpeg` binary for the curren
 
 ## Example
 ```bash
-cd /Users/demo/.openclaw/workspace/eraofrobotics
+cd /Users/demo/.openclaw/workspace/eraofrobotics-copy
 ../.venv/bin/python scripts/generate_video_from_images.py generated-images \
   --output output/generated-videos/eraofrobotics-montage.mp4 \
   --seconds-per-image 2.8 \

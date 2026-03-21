@@ -7,7 +7,7 @@
 
 ## Recommended usage
 ```bash
-cd /Users/demo/.openclaw/workspace/eraofrobotics
+cd /Users/demo/.openclaw/workspace/eraofrobotics-copy
 OPENAI_API_KEY=your_key_here ../.venv/bin/python scripts/generate_images.py "A cinematic editorial robotics lab scene" --outdir generated-images --name robotics-lab-hero
 ```
 

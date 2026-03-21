@@ -19,7 +19,7 @@ This site can generate article + audio pairs from a single queue file.
 ## Requirements
 Install into the workspace venv:
 ```bash
-cd /Users/demo/.openclaw/workspace/eraofrobotics
+cd /Users/demo/.openclaw/workspace/eraofrobotics-copy
 ../.venv/bin/python -m pip install openai gTTS
 ```
 

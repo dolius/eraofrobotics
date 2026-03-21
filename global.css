@@ -132,7 +132,8 @@ ul,ol{padding-left:1.2rem;color:var(--muted)}li{margin-bottom:.8rem;line-height:
 .section{margin-top:5rem}.section-intro{color:#d0d0d0;font-size:1.15rem;font-weight:500;line-height:1.7;max-width:760px;margin-bottom:2rem}
 .grid{display:grid;gap:2px}.grid-auto{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
 .grid-2,.grid-2-even,.section-grid,.lanes,.path-grid,.purpose-grid,.stats,.image-mosaic{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}
-.card,.lane,.path-card,.purpose,.mini-item,.stat,.field,.result{padding:2.25rem}
+.card,.lane,.path-card,.purpose,.mini-item,.stat,.field,.result{padding:2.25rem;display:flex;flex-direction:column;height:100%}
+.card .btn,.lane .btn,.path-card .btn,.purpose .btn,.card .service-link{margin-top:auto;align-self:flex-start}
 .card:hover,.lane:hover,.path-card:hover,.purpose:hover,.image-card:hover{background:#111111}.mini-list{display:grid;gap:2px}
 .stats .stat strong,.num,.service-number{display:block;font-size:clamp(2.4rem,6vw,5rem);line-height:.9;color:#2a2a2a;font-weight:900;margin-bottom:.5rem;letter-spacing:-0.05em}
 .image-card{position:relative;min-height:320px;overflow:hidden;border:1px solid var(--line);background:#0a0a0a}.image-card.large{min-height:520px}.image-card img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9) contrast(1.03)}

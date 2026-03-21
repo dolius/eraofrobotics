@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Visits Dashboard | Era of Robotics</title>
+  <meta name="description" content="A lightweight analytics dashboard for Era of Robotics showing page views, sessions, top pages, and referral traffic." />
+  <link rel="canonical" href="https://eraofrobotics.com/visits.html" />
+  <meta property="og:title" content="Visits Dashboard | Era of Robotics" />
+  <meta property="og:description" content="A lightweight analytics dashboard for Era of Robotics showing page views, sessions, top pages, and referral traffic." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://eraofrobotics.com/visits.html" />
+  <meta property="og:site_name" content="Era of Robotics" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Visits Dashboard | Era of Robotics" />
+  <meta name="twitter:description" content="A lightweight analytics dashboard for Era of Robotics showing page views, sessions, top pages, and referral traffic." />
+  <meta name="author" content="Era of Robotics" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="global.css"/>
+  <style>
+    .metric-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px}
+    .metric .num{font-size:clamp(2rem,4vw,4rem)}
+    .table-card{overflow:auto}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:.9rem;border-top:1px solid var(--line);text-align:left;color:var(--muted)}
+    th{color:#fff;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em}
+    #status{color:#ffb4ab;margin-top:1rem}
+    @media (max-width:900px){.metric-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="/index.html"><span class="site-brand-mark">◼</span><span class="site-brand-text">Era of Robotics</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <nav class="site-nav">
+        <a href="/index.html">Home</a>
+        <a href="/robotics-shift-guide.html">Explainer</a>
+        <a href="/tools.html">Tools</a>
+        <a href="/briefs.html">Briefs</a>
+        <a href="/reference-asset-page.html">Resources</a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap">
+    <section class="hero hero-split">
+      <div class="hero-copy">
+        <div class="eyebrow">Visits Dashboard</div>
+        <h1>Traffic, top pages, and the shape of attention.</h1>
+        <p class="section-intro">A lightweight internal analytics view backed by Supabase. This page is for understanding what people are actually looking at, not just what the site hopes they admire.</p>
+        <p id="status">Loading analytics…</p>
+      </div>
+      <div class="hero-media" style="background-image:url('assets/images/robotics-market-map.png')"></div>
+    </section>
+
+    <section class="section metric-grid">
+      <article class="card metric"><div class="tag">Page Views</div><div class="num" id="pageViews">—</div></article>
+      <article class="card metric"><div class="tag">Unique Sessions</div><div class="num" id="uniqueSessions">—</div></article>
+      <article class="card metric"><div class="tag">Captured Events</div><div class="num" id="capturedEvents">—</div></article>
+    </section>
+
+    <section class="template-section">
+      <div class="template-number">01</div>
+      <div class="template-header"><h2 class="template-title">Top pages</h2></div>
+      <article class="card table-card">
+        <table>
+          <thead><tr><th>Path</th><th>Views</th></tr></thead>
+          <tbody id="topPagesBody"></tbody>
+        </table>
+      </article>
+    </section>
+
+    <section class="template-section">
+      <div class="template-number">02</div>
+      <div class="template-header"><h2 class="template-title">Top referrers</h2></div>
+      <article class="card table-card">
+        <table>
+          <thead><tr><th>Referrer</th><th>Visits</th></tr></thead>
+          <tbody id="topRefBody"></tbody>
+        </table>
+      </article>
+    </section>
+  </div>
+  <script src="site.js"></script>
+  <script>
+    async function loadAnalytics(){
+      const status = document.getElementById('status');
+      try{
+        const res = await fetch('/api/analytics-summary');
+        const data = await res.json();
+        if(!res.ok || !data.ok) throw new Error(data.error || 'analytics_failed');
+        document.getElementById('pageViews').textContent = data.totals.pageViews;
+        document.getElementById('uniqueSessions').textContent = data.totals.uniqueSessions;
+        document.getElementById('capturedEvents').textContent = data.totals.capturedEvents;
+        document.getElementById('topPagesBody').innerHTML = (data.topPages || []).map(r => `<tr><td>${r.path}</td><td>${r.views}</td></tr>`).join('');
+        document.getElementById('topRefBody').innerHTML = (data.topReferrers || []).map(r => `<tr><td>${r.referrer}</td><td>${r.visits}</td></tr>`).join('');
+        status.textContent = 'Analytics loaded.';
+      }catch(err){
+        status.textContent = 'Could not load analytics yet. Make sure the analytics_events table exists and env vars are set.';
+      }
+    }
+    loadAnalytics();
+  </script>
+</body>
+</html>

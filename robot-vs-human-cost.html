@@ -4,80 +4,244 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Robot vs Human Cost Comparison | Era of Robotics</title>
-  <meta name="description" content="Compare annual operating cost between human labor and a robotics deployment using wage, maintenance, and deployment assumptions." />
+  <meta name="description" content="Compare annual worker costs vs robot deployment costs, including maintenance, to see savings and break-even timing." />
   <link rel="stylesheet" href="global.css" />
   <style>
-    .hero-media{background:url('assets/images/robot-vs-human-cost-visual.png') center/cover no-repeat}
-    input{width:100%;padding:14px 16px;border-radius:14px;border:1px solid var(--border);background:#0b1222;color:var(--text);font:inherit}
-    label{display:block;font-weight:700;margin:0 0 8px}
-    .result{background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2)}
-    .muted{color:var(--muted)}
+    .hero-media{background:linear-gradient(180deg,rgba(7,11,20,.12),rgba(7,11,20,.32)),url('assets/images/robot-vs-human-cost-visual.png') center/cover no-repeat}
+    .calc-layout{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+    .input-group{margin-bottom:1.1rem}
+    .input-group:last-child{margin-bottom:0}
+    .section-label{font-size:.75rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:#666;margin:0 0 1rem}
+    label{display:block;font-size:.86rem;font-weight:700;color:#d0d0d0;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.45rem}
+    .input-hint{font-size:.82rem;color:#8c8c8c;margin-top:.35rem;line-height:1.4}
+    input[type=number]{width:100%;padding:1rem;border:1px solid var(--line);background:#0f0f0f;color:#fff;font:inherit;box-sizing:border-box}
+
+    .results-stack{display:grid;gap:2px}
+    .result-card{padding:2rem;background:#0e0e0e;border:1px solid #1c1c1c}
+    .result-card.good{background:#0b170d;border-color:#23422a}
+    .result-card.warn{background:#181408;border-color:#4a3e14}
+    .result-card.bad{background:#1a0b0b;border-color:#4b1717}
+    .metric-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:#8b8b8b;font-weight:800;margin-bottom:.45rem}
+    .metric-value{font-size:clamp(2rem,4vw,3.1rem);line-height:1;font-weight:900;letter-spacing:-.03em;color:#fff}
+    .metric-sub{margin-top:.55rem;font-size:.95rem;line-height:1.5;color:#b9b9b9}
+    .green{color:#4ade80}
+    .yellow{color:#fbbf24}
+    .red{color:#f87171}
+
+    .summary-table{width:100%;border-collapse:collapse;margin-top:.8rem}
+    .summary-table th,.summary-table td{padding:.65rem .5rem;border-bottom:1px solid #191919;text-align:left}
+    .summary-table th{font-size:.73rem;text-transform:uppercase;letter-spacing:.06em;color:#676767}
+    .summary-table td{font-size:.9rem;color:#d8d8d8}
+
+    @media (max-width:900px){
+      .calc-layout{grid-template-columns:1fr}
+    }
   </style>
 </head>
 <body>
 <div class="wrap-narrow">
-  <div class="topnav"><a href="/tools.html">← Back to tools</a></div>
+  <div class="topnav"><a href="/tools.html">&larr; Back to tools</a></div>
+
   <section class="hero hero-split">
     <div class="hero-copy">
       <div class="eyebrow">Comparison tool</div>
-      <h1>Robot vs Human Cost Comparison</h1>
-      <p>If you want to compare labor to automation without bathing in vague optimism, this page does the blunt math.</p>
+      <h1>Workers vs Robots: Annual Cost Comparison</h1>
+      <p>Enter worker count and cost per worker, then compare against robot purchase plus yearly maintenance to see annual savings and 5-year impact.</p>
       <div class="button-row">
         <a class="btn ghost" href="automation-readiness-score.html">Check readiness</a>
-        <a class="btn ghost" href="weblord-protocol.html">See the protocol</a>
+        <a class="btn ghost" href="robotics-roi-calculator.html">Open ROI calculator</a>
       </div>
     </div>
     <div class="hero-media"></div>
   </section>
-  <section class="grid grid-2-even section">
+
+  <section class="section calc-layout">
     <article class="card">
-      <div class="grid grid-auto">
-        <div><label for="staff">Number of workers</label><input id="staff" type="number" value="4" /></div>
-        <div><label for="salary">Loaded annual cost per worker ($)</label><input id="salary" type="number" value="55000" /></div>
-        <div><label for="robotAnnual">Annual robot maintenance/support ($)</label><input id="robotAnnual" type="number" value="35000" /></div>
-        <div><label for="deploy">Upfront deployment cost ($)</label><input id="deploy" type="number" value="280000" /></div>
+      <div class="section-label">Human labor inputs</div>
+      <div class="input-group">
+        <label for="workers">How many workers do this job?</label>
+        <input id="workers" type="number" min="1" value="6" oninput="calc()" />
       </div>
-      <p style="margin-top:18px"><button class="btn" onclick="calc()">Compare costs</button></p>
+      <div class="input-group">
+        <label for="costPerWorker">Annual cost per worker ($)</label>
+        <input id="costPerWorker" type="number" min="0" value="55000" oninput="calc()" />
+        <div class="input-hint">Use fully loaded cost if possible (wages + benefits + payroll overhead).</div>
+      </div>
+      <div class="input-group">
+        <label for="wageGrowth">Annual wage growth (%)</label>
+        <input id="wageGrowth" type="number" min="0" max="20" value="3" oninput="calc()" />
+      </div>
+
+      <div class="section-label" style="margin-top:1.4rem">Robot inputs</div>
+      <div class="input-group">
+        <label for="robots">How many robots do the same work?</label>
+        <input id="robots" type="number" min="1" value="2" oninput="calc()" />
+      </div>
+      <div class="input-group">
+        <label for="robotCost">Upfront cost per robot ($)</label>
+        <input id="robotCost" type="number" min="0" value="90000" oninput="calc()" />
+      </div>
+      <div class="input-group">
+        <label for="setupCost">One-time setup/integration cost ($)</label>
+        <input id="setupCost" type="number" min="0" value="40000" oninput="calc()" />
+      </div>
+      <div class="input-group">
+        <label for="maintenance">Annual maintenance per robot ($)</label>
+        <input id="maintenance" type="number" min="0" value="9000" oninput="calc()" />
+      </div>
+      <div class="input-group">
+        <label for="operator">Annual robot operator/supervisor cost ($)</label>
+        <input id="operator" type="number" min="0" value="60000" oninput="calc()" />
+      </div>
     </article>
-    <article class="card result">
-      <h2>Comparison</h2>
-      <div class="num" id="laborCost">$0</div>
-      <p class="muted">Annual human labor cost</p>
-      <div class="num" id="robotCost">$0</div>
-      <p class="muted">Year-one robotics cost</p>
-      <div class="num" id="delta">$0</div>
-      <p class="muted">Year-one difference</p>
-    </article>
+
+    <div class="results-stack">
+      <article class="result-card good" id="savingsCard">
+        <div class="metric-label">This is how much you save with robots</div>
+        <div class="metric-value green" id="annualSavings">$0 / year</div>
+        <div class="metric-sub" id="annualMessage">Fill your numbers to compare annual worker cost and annual robot running cost.</div>
+      </article>
+
+      <article class="result-card warn">
+        <div class="metric-label">Break-even estimate</div>
+        <div class="metric-value yellow" id="breakEven">Year -</div>
+        <div class="metric-sub" id="breakEvenMsg">Compares cumulative worker spend vs robot upfront + running costs.</div>
+      </article>
+
+      <article class="result-card">
+        <div class="metric-label">5-year comparison</div>
+        <table class="summary-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>5-year worker cost</td><td id="worker5">$0</td></tr>
+            <tr><td>5-year robot total cost</td><td id="robot5">$0</td></tr>
+            <tr><td>5-year net savings</td><td id="net5" class="green">$0</td></tr>
+            <tr><td>Annual worker total</td><td id="workerAnnual">$0</td></tr>
+            <tr><td>Annual robot running cost</td><td id="robotAnnual">$0</td></tr>
+          </tbody>
+        </table>
+      </article>
+    </div>
   </section>
+
   <section class="section grid grid-2-even">
     <article class="card">
-      <div class="tag">Related tool</div>
-      <h2>Need a fuller ROI picture?</h2>
-      <p>Use the ROI calculator when you want productivity gain and payback period included instead of a simpler year-one comparison.</p>
-      <p><a href="robotics-roi-calculator.html">Open the ROI calculator →</a></p>
+      <div class="tag">Related article</div>
+      <h3>Why the Robotics Shift Matters Now</h3>
+      <p>Read the big-picture explainer before committing to deployment decisions.</p>
+      <a class="btn" href="robotics-shift-guide.html">Read explainer</a>
     </article>
     <article class="card">
-      <div class="tag">Related system</div>
-      <h2>See how this fits the site</h2>
-      <p>The WebLord protocol page turns the site’s publishing and utility logic into an actual visible system.</p>
-      <p><a href="weblord-protocol.html">Open the WebLord protocol →</a></p>
+      <div class="tag">Related report</div>
+      <h3>Download the Robotics Economics Brief</h3>
+      <p>A tighter breakdown of automation economics, payback logic, and adoption pressure.</p>
+      <a class="btn" href="robotics-economics-brief.html">Open report</a>
     </article>
   </section>
 </div>
+
 <script>
-function money(v){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(v)}
-function calc(){
- const staff=Number(document.getElementById('staff').value)||0;
- const salary=Number(document.getElementById('salary').value)||0;
- const robotAnnual=Number(document.getElementById('robotAnnual').value)||0;
- const deploy=Number(document.getElementById('deploy').value)||0;
- const labor=staff*salary;
- const robot=robotAnnual+deploy;
- const delta=labor-robot;
- document.getElementById('laborCost').textContent=money(labor);
- document.getElementById('robotCost').textContent=money(robot);
- document.getElementById('delta').textContent=money(delta);
+function money(v){
+  return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(v);
 }
+
+function n(id){
+  return Number(document.getElementById(id).value) || 0;
+}
+
+function calc(){
+  var workers = n('workers');
+  var costPerWorker = n('costPerWorker');
+  var wageGrowth = n('wageGrowth') / 100;
+
+  var robots = n('robots');
+  var robotCost = n('robotCost');
+  var setupCost = n('setupCost');
+  var maintenance = n('maintenance');
+  var operator = n('operator');
+
+  var annualWorkerCost = workers * costPerWorker;
+  var annualRobotRunning = (robots * maintenance) + operator;
+  var upfrontRobot = (robots * robotCost) + setupCost;
+
+  var annualSavings = annualWorkerCost - annualRobotRunning;
+
+  var savingsCard = document.getElementById('savingsCard');
+  var annualSavingsEl = document.getElementById('annualSavings');
+  var annualMessage = document.getElementById('annualMessage');
+
+  if (annualSavings > 0) {
+    savingsCard.className = 'result-card good';
+    annualSavingsEl.className = 'metric-value green';
+    annualSavingsEl.textContent = money(annualSavings) + ' / year';
+    annualMessage.textContent = 'Robots are cheaper to run by ' + money(annualSavings) + ' each year once deployed.';
+  } else if (annualSavings < 0) {
+    savingsCard.className = 'result-card bad';
+    annualSavingsEl.className = 'metric-value red';
+    annualSavingsEl.textContent = money(Math.abs(annualSavings)) + ' / year more';
+    annualMessage.textContent = 'Robots cost more to run annually than workers with current assumptions.';
+  } else {
+    savingsCard.className = 'result-card warn';
+    annualSavingsEl.className = 'metric-value yellow';
+    annualSavingsEl.textContent = 'Break-even running cost';
+    annualMessage.textContent = 'Annual running costs are equal; upfront robot investment still needs recovery.';
+  }
+
+  var workerCumulative = 0;
+  var robotCumulative = upfrontRobot;
+  var breakEvenYear = null;
+  var workerYear = annualWorkerCost;
+
+  for (var year = 1; year <= 5; year++) {
+    if (year > 1) workerYear = workerYear * (1 + wageGrowth);
+    workerCumulative += workerYear;
+    robotCumulative += annualRobotRunning;
+    if (breakEvenYear === null && workerCumulative >= robotCumulative) {
+      breakEvenYear = year;
+    }
+  }
+
+  var breakEven = document.getElementById('breakEven');
+  var breakEvenMsg = document.getElementById('breakEvenMsg');
+
+  if (breakEvenYear !== null) {
+    breakEven.textContent = 'Year ' + breakEvenYear;
+    breakEven.className = breakEvenYear <= 3 ? 'metric-value green' : 'metric-value yellow';
+    breakEvenMsg.textContent = 'Robot investment is recovered by year ' + breakEvenYear + ' at your current assumptions.';
+  } else if (annualSavings > 0) {
+    var gap = robotCumulative - workerCumulative;
+    var extraYears = Math.ceil(gap / annualSavings);
+    breakEven.textContent = 'Year ~' + (5 + extraYears);
+    breakEven.className = 'metric-value yellow';
+    breakEvenMsg.textContent = 'Break-even is outside 5 years but still reachable.';
+  } else {
+    breakEven.textContent = 'No break-even';
+    breakEven.className = 'metric-value red';
+    breakEvenMsg.textContent = 'With these values, robots do not recover total cost.';
+  }
+
+  var net5 = workerCumulative - robotCumulative;
+
+  document.getElementById('worker5').textContent = money(workerCumulative);
+  document.getElementById('robot5').textContent = money(robotCumulative);
+  document.getElementById('workerAnnual').textContent = money(annualWorkerCost);
+  document.getElementById('robotAnnual').textContent = money(annualRobotRunning);
+
+  var net5El = document.getElementById('net5');
+  if (net5 >= 0) {
+    net5El.textContent = money(net5) + ' saved';
+    net5El.className = 'green';
+  } else {
+    net5El.textContent = money(Math.abs(net5)) + ' more expensive';
+    net5El.className = 'red';
+  }
+}
+
 calc();
 </script>
 </body>

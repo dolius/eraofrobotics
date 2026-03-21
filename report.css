@@ -1,0 +1,25 @@
+body.report-body{background:#f3efe8;color:#1a1a1a;font-family:"Helvetica Neue",Arial,sans-serif}
+.report-shell{max-width:960px;margin:0 auto;background:#fff;min-height:100vh}
+.report-cover{padding:4rem 3rem 3rem;background:linear-gradient(135deg,#f5efe5 0%,#fff 100%);border-bottom:6px solid #ff3b30}
+.report-kicker{font-size:.85rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#b3261e;margin-bottom:1rem}
+.report-title{font-size:clamp(2.4rem,5vw,4.8rem);line-height:.92;letter-spacing:-.04em;text-transform:uppercase;margin:0 0 1rem;color:#111}
+.report-subtitle{font-size:1.15rem;line-height:1.7;color:#444;max-width:760px;margin-bottom:1.25rem}
+.report-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:2rem}
+.report-meta-box{border:1px solid #ddd;padding:1rem;background:#fff}
+.report-meta-box strong{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:#b3261e;margin-bottom:.45rem}
+.report-main{padding:2rem 3rem 4rem}
+.report-section{padding:2.2rem 0;border-top:1px solid #ece7df}
+.report-section:first-child{border-top:none;padding-top:0}
+.report-section h2{font-size:clamp(1.5rem,3vw,2.5rem);line-height:1;text-transform:uppercase;color:#111;margin-bottom:1rem}
+.report-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.report-card{border:1px solid #e5dfd6;padding:1.25rem;background:#faf8f4}
+.report-card h3{font-size:1.05rem;text-transform:uppercase;letter-spacing:-.02em;color:#111;margin-bottom:.7rem}
+.report-card p,.report-section p,.report-section li{color:#333;line-height:1.72;font-size:1rem}
+.report-section ul,.report-section ol{padding-left:1.2rem}
+.report-highlight{padding:1.4rem;border-left:6px solid #ff3b30;background:#faf6f2;margin-top:1.2rem}
+.report-cta{margin-top:2rem;padding:1.4rem;background:#111;color:#fff}
+.report-cta h3{color:#fff;margin-bottom:.7rem}
+.report-cta p{color:#e0e0e0}
+@media (max-width:900px){.report-meta,.report-grid{grid-template-columns:1fr}.report-cover,.report-main{padding-left:1.25rem;padding-right:1.25rem}}
+@page{size:Letter;margin:18mm 16mm}
+@media print{body.report-body{background:#fff}.site-header,.topnav,.button-row{display:none !important}.report-shell{max-width:none}.report-cover{padding:0 0 16pt;border-bottom:3pt solid #ff3b30;background:#fff}.report-main{padding:16pt 0 0}.report-section{break-inside:avoid}.report-card{break-inside:avoid;background:#fff}.report-cta{background:#fff;color:#111;border:1px solid #ddd}.report-cta p,.report-cta h3{color:#111}}

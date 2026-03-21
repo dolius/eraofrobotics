@@ -1,246 +1,65 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Humanoid Reality Brief and SOP | Era of Robotics</title>
-	<meta name="description" content="A complete humanoid robotics report and SOP: deployment reality, readiness gates, operating procedure, risk controls, and implementation guidance." />
-	<link rel="stylesheet" href="global.css" />
-	<style>
-		.hero-media{background:linear-gradient(180deg,rgba(7,11,20,.12),rgba(7,11,20,.34)),url('assets/images/home-robotics-future.png') center/cover no-repeat}
-		.brief-image{margin-top:1rem;border:1px solid var(--line);background:#090909}
-		.brief-image img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover;filter:saturate(.9) contrast(1.04)}
-		.brief-image figcaption{padding:.9rem 1rem;color:#a2a2a2;font-size:.9rem;line-height:1.5;border-top:1px solid var(--line)}
-		.kpi-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px}
-		.kpi{padding:1.5rem;background:#0e0e0e;border:1px solid var(--line)}
-		.kpi strong{display:block;color:#fff;font-size:1.3rem;line-height:1.1;margin-bottom:.35rem}
-		.kpi span{color:#a0a0a0;font-size:.9rem}
-		.sop-list{margin:0;padding-left:1.1rem;color:#d0d0d0;line-height:1.75}
-		.sop-list li{margin:.4rem 0}
-		.section-intro.tight{max-width:960px}
-		@media (max-width:900px){.kpi-grid{grid-template-columns:1fr 1fr}}
-		@media (max-width:560px){.kpi-grid{grid-template-columns:1fr}}
-	</style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Humanoid Reality Brief | Era of Robotics</title>
+  <meta name="description" content="A comprehensive brief on humanoid robotics, demo culture, deployment realism, and where the category may actually fit."/>
+  <link rel="stylesheet" href="global.css"/>
+  <link rel="stylesheet" href="report.css"/>
 </head>
-<body>
-  <header class="site-header">
-    <div class="site-header-inner">
-      <a class="site-brand" href="/index.html">
-        <span class="site-brand-mark">◼</span>
-        <span class="site-brand-text">Era of Robotics</span>
-      </a>
-      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="site-nav">
-        <a href="/index.html">Home</a>
-        <a href="/robotics-shift-guide.html">Explainer</a>
-        <a href="/tools.html">Tools</a>
-        <a href="/briefs.html">Briefs</a>
-        <a href="/reference-asset-page.html">Resources</a>
-      </nav>
-    </div>
-  </header>
-	<div class="wrap-narrow">
-		<div class="topnav"><a href="/briefs.html">← Back to reports</a></div>
-
-		<section class="hero hero-split">
-			<div class="hero-copy">
-				<div class="eyebrow">Comprehensive Brief + SOP</div>
-				<h1>Humanoid Reality Brief: Operational Playbook, Not Hype Reel</h1>
-				<p class="section-intro">This is the full operating report for teams evaluating humanoid robots in actual facilities. It combines market reality, deployment limits, and a practical SOP you can run.</p>
-				<p>Humanoids are one of the most over-promoted categories in robotics. They are also potentially useful in a narrow set of physically variable tasks where fixed automation is hard. This brief is designed to separate signal from theater and give you an implementation procedure that can be executed without guesswork.</p>
-				<div class="button-row">
-					<a class="btn" href="/assets/pdf/humanoid-reality-brief.pdf">Download SOP PDF</a>
-					<a class="btn ghost" href="/robotics-economics-brief.html">Read economics brief</a>
-					<a class="btn ghost" href="/tools.html">Use evaluation tools</a>
-				</div>
-			</div>
-			<div class="hero-media"></div>
-		</section>
-
-		<section class="template-section">
-			<div class="template-number">01</div>
-			<div class="template-header">
-				<h2 class="template-title">Executive Summary</h2>
-			</div>
-			<div class="grid grid-2-even">
-				<article class="card">
-					<h3>Where humanoids are real today</h3>
-					<ul class="sop-list">
-						<li>Repetitive intra-logistics work in environments designed for people.</li>
-						<li>Material handling where existing tooling cannot easily adapt to layout changes.</li>
-						<li>Pilot programs with clear supervision, constrained task boundaries, and strict safety rails.</li>
-					</ul>
-				</article>
-				<article class="card">
-					<h3>Where humanoids are not ready</h3>
-					<ul class="sop-list">
-						<li>Fully autonomous broad-scope labor replacement across many task types.</li>
-						<li>High-mix environments without robust fallback processes.</li>
-						<li>Operations needing near-zero downtime without mature service networks.</li>
-					</ul>
-				</article>
-			</div>
-			<figure class="brief-image">
-				<img src="assets/images/human-robot-collaboration.png" alt="Humans and robots collaborating on warehouse tasks" />
-				<figcaption>Humanoid value is strongest when it augments existing workflows and staff, rather than attempting immediate full-role replacement.</figcaption>
-			</figure>
-		</section>
-
-		<section class="template-section">
-			<div class="template-number">02</div>
-			<div class="template-header">
-				<h2 class="template-title">Scope, Assumptions, and Readiness Gates</h2>
-			</div>
-			<p class="section-intro tight">Use this SOP only when your site can commit to controlled rollout discipline. If you cannot satisfy the minimum gates below, delay deployment and focus on process stabilization first.</p>
-			<div class="grid grid-auto">
-				<article class="card">
-					<h3>Scope of this SOP</h3>
-					<ul class="sop-list">
-						<li>Facility type: warehouse, light manufacturing, structured service floor.</li>
-						<li>Initial horizon: 90-day pilot plus 6-month scale decision.</li>
-						<li>Robot role: pick/carry/assist task bundles with human oversight.</li>
-					</ul>
-				</article>
-				<article class="card">
-					<h3>Readiness gate A: Process clarity</h3>
-					<ul class="sop-list">
-						<li>Task map documented with cycle times and failure modes.</li>
-						<li>Known bottlenecks quantified in hourly throughput terms.</li>
-						<li>Fallback human procedures already written and tested.</li>
-					</ul>
-				</article>
-				<article class="card">
-					<h3>Readiness gate B: Safety and governance</h3>
-					<ul class="sop-list">
-						<li>Safety owner assigned and escalation matrix in place.</li>
-						<li>Incident logging standard agreed before first deployment day.</li>
-						<li>Vendor service response SLAs contracted in writing.</li>
-					</ul>
-				</article>
-			</div>
-		</section>
-
-		<section class="template-section">
-			<div class="template-number">03</div>
-			<div class="template-header">
-				<h2 class="template-title">Standard Operating Procedure (SOP)</h2>
-			</div>
-			<div class="grid grid-2-even">
-				<article class="card">
-					<h3>Phase 1: Baseline and design (Week 0-2)</h3>
-					<ol class="sop-list">
-						<li>Define one target workflow and one measurable bottleneck.</li>
-						<li>Record current baseline: throughput/hour, error rate, labor-hours/shift, safety incidents.</li>
-						<li>Set pass/fail targets for pilot completion.</li>
-						<li>Map human fallback protocol for robot downtime.</li>
-					</ol>
-				</article>
-				<article class="card">
-					<h3>Phase 2: Pilot execution (Week 3-8)</h3>
-					<ol class="sop-list">
-						<li>Deploy in one controlled zone with constrained task boundaries.</li>
-						<li>Run dual-shift supervision for first two weeks.</li>
-						<li>Track stop causes: navigation error, object mismatch, software fault, human intervention.</li>
-						<li>Hold weekly corrective-action review with operations and vendor teams.</li>
-					</ol>
-				</article>
-				<article class="card">
-					<h3>Phase 3: Stabilization (Week 9-12)</h3>
-					<ol class="sop-list">
-						<li>Tune task library and retire underperforming use cases.</li>
-						<li>Measure uptime and mean time to recovery (MTTR).</li>
-						<li>Recalculate unit economics using real pilot data.</li>
-						<li>Issue go/no-go recommendation for expansion.</li>
-					</ol>
-				</article>
-				<article class="card">
-					<h3>Phase 4: Scale decision (Month 4-6)</h3>
-					<ol class="sop-list">
-						<li>Expand only if target KPI thresholds are met for four consecutive weeks.</li>
-						<li>Scale zone-by-zone, not site-wide in a single cutover.</li>
-						<li>Refresh operator training and safety drills before each expansion stage.</li>
-						<li>Lock quarterly business review with vendor on uptime and cost outcomes.</li>
-					</ol>
-				</article>
-			</div>
-		</section>
-
-		<section class="template-section">
-			<div class="template-number">04</div>
-			<div class="template-header">
-				<h2 class="template-title">KPI Targets and Reporting Format</h2>
-			</div>
-			<p class="section-intro tight">Use weekly reporting with stable definitions. Moving the goalposts is how pilot programs hide weak results.</p>
-			<div class="kpi-grid">
-				<div class="kpi"><strong>&ge; 92%</strong><span>Operational uptime by Week 8</span></div>
-				<div class="kpi"><strong>&lt; 15 min</strong><span>Mean time to recovery on stop events</span></div>
-				<div class="kpi"><strong>&ge; 12%</strong><span>Throughput gain vs baseline workflow</span></div>
-				<div class="kpi"><strong>&le; 18 mo</strong><span>Payback window to justify scale</span></div>
-			</div>
-			<figure class="brief-image">
-				<img src="assets/images/robotics-market-map.png" alt="Robotics market map showing where categories are commercially mature" />
-				<figcaption>Humanoids should be judged against mature alternatives in market structure, not against promotional demos.</figcaption>
-			</figure>
-		</section>
-
-		<section class="template-section">
-			<div class="template-number">05</div>
-			<div class="template-header">
-				<h2 class="template-title">Risk Controls, Failure Modes, and Mitigation</h2>
-			</div>
-			<div class="grid grid-auto">
-				<article class="card">
-					<h3>Technical reliability risk</h3>
-					<p>Primary failure mode: task execution inconsistency in edge cases.</p>
-					<p>Mitigation: constrain initial task set, enforce structured exception handling, and keep explicit handoff rules to supervisors.</p>
-				</article>
-				<article class="card">
-					<h3>Safety risk</h3>
-					<p>Primary failure mode: unsafe human-robot interaction during fallback or congestion.</p>
-					<p>Mitigation: zone geofencing, mandatory safety drills, and hard stop governance with event-level auditing.</p>
-				</article>
-				<article class="card">
-					<h3>Economic risk</h3>
-					<p>Primary failure mode: pilot outcomes fail to generalize to full deployment economics.</p>
-					<p>Mitigation: model costs using observed uptime, intervention labor, and maintenance events, not brochure assumptions.</p>
-				</article>
-			</div>
-		</section>
-
-		<section class="template-section">
-			<div class="template-number">06</div>
-			<div class="template-header">
-				<h2 class="template-title">Implementation Checklist and Next Steps</h2>
-			</div>
-			<div class="grid grid-2-even">
-				<article class="card">
-					<h3>Pre-launch checklist</h3>
-					<ul class="sop-list">
-						<li>Task scope approved and baseline metrics captured.</li>
-						<li>Safety owner and escalation matrix signed off.</li>
-						<li>Vendor SLA and spare parts plan documented.</li>
-						<li>Operator training complete and fallback runbook tested.</li>
-					</ul>
-				</article>
-				<article class="card">
-					<h3>Post-pilot decision checklist</h3>
-					<ul class="sop-list">
-						<li>KPI thresholds achieved for 4 continuous weeks.</li>
-						<li>MTTR, downtime costs, and intervention hours validated.</li>
-						<li>Economics model updated with real observed numbers.</li>
-						<li>Scale plan approved with phased rollout gates.</li>
-					</ul>
-				</article>
-			</div>
-			<div class="button-row" style="margin-top:2rem">
-				<a class="btn" href="/assets/pdf/humanoid-reality-brief.pdf">Download SOP PDF</a>
-				<a class="btn ghost" href="/robot-vs-human-cost.html">Open cost comparison tool</a>
-				<a class="btn ghost" href="/automation-readiness-score.html">Run readiness score</a>
-			</div>
-		</section>
-	</div>
-  <script src="site.js"></script>
+<body class="report-body">
+  <div class="report-shell">
+    <div class="topnav wrap-narrow"><a href="/briefs.html">← Back to reports</a></div>
+    <section class="report-cover">
+      <div class="report-kicker">Era of Robotics — Category Brief</div>
+      <h1 class="report-title">Humanoid Reality Brief</h1>
+      <p class="report-subtitle">A deeper report on one of the most over-watched corners of robotics: why humanoids command unusual attention, what the demos hide, and why real deployment questions are still harder than the public narrative makes them look.</p>
+      <div class="report-meta">
+        <div class="report-meta-box"><strong>Best for</strong>Investors, founders, analysts, curious operators</div>
+        <div class="report-meta-box"><strong>Format</strong>HTML source + downloadable PDF</div>
+        <div class="report-meta-box"><strong>Core use</strong>Separate spectacle from deployment realism</div>
+      </div>
+    </section>
+    <main class="report-main">
+      <section class="report-section">
+        <h2>Executive Summary</h2>
+        <p>Humanoids occupy a strange place in robotics. They are unusually compelling because they match human environments and compress a huge amount of technological ambition into one machine. But that same broad promise makes them expensive, difficult, and easy to overstate.</p>
+        <div class="report-highlight"><p>Humanoids may matter long-term. The real question is not whether they are impressive. It is where they become useful enough, reliable enough, and affordable enough to earn real deployment density.</p></div>
+      </section>
+      <section class="report-section">
+        <h2>Why Humanoids Are So Compelling</h2>
+        <div class="report-grid">
+          <article class="report-card"><h3>They fit human environments</h3><p>Many built environments were designed around the human body, which gives humanoids an intuitive conceptual advantage.</p></article>
+          <article class="report-card"><h3>They symbolize general-purpose robotics</h3><p>Humanoids embody the dream of machines that can move through multiple workflows rather than staying trapped in one narrow task.</p></article>
+          <article class="report-card"><h3>They command unusual attention</h3><p>The public, media, and capital markets all react strongly to humanoids in ways they often do not to narrower systems.</p></article>
+          <article class="report-card"><h3>They compress many disciplines into one machine</h3><p>Locomotion, manipulation, perception, control, and safety all converge in a way that makes the engineering feel cinematic.</p></article>
+        </div>
+      </section>
+      <section class="report-section">
+        <h2>What Makes the Category So Difficult</h2>
+        <ul>
+          <li>Reliability demands are extremely high.</li>
+          <li>General-purpose usefulness is expensive to prove in real conditions.</li>
+          <li>Safety requirements and failure tolerance are brutal in human environments.</li>
+          <li>Narrower systems may still deliver cleaner economics sooner.</li>
+        </ul>
+      </section>
+      <section class="report-section">
+        <h2>How to Watch the Category Without Getting Seduced by It</h2>
+        <div class="report-grid">
+          <article class="report-card"><h3>Watch deployment density</h3><p>Ask where the machines are working repeatedly, not where they look amazing once.</p></article>
+          <article class="report-card"><h3>Watch task specificity</h3><p>Humanoids may enter through narrower use cases before the broader dream arrives.</p></article>
+          <article class="report-card"><h3>Watch economics</h3><p>The labor case, uptime, and implementation burden must become believable, not just aspirational.</p></article>
+          <article class="report-card"><h3>Watch who pays first</h3><p>The first serious buyers will reveal more about the category than the loudest demo clips.</p></article>
+        </div>
+      </section>
+      <section class="report-section">
+        <h2>How to Use This Brief</h2>
+        <p>Use this report when you want to keep your head clear while the category gets noisier. It gives you a cleaner way to evaluate humanoids as a market question rather than a spectacle question.</p>
+        <div class="report-cta"><h3>Next move</h3><p>Go back to the broader explainer if you want to place humanoids inside the larger robotics shift rather than treating them as the whole story.</p></div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>

@@ -114,6 +114,11 @@ form.addEventListener('submit', async (e) => {
   errorBox.style.display = 'none';
   const email = document.getElementById('email').value.trim();
   const persona = document.getElementById('persona').value;
+  const redirectToThankYou = (downloadUrl = '/assets/pdf/robotics-brief-real.pdf') => {
+    const params = new URLSearchParams({ email, persona, download: downloadUrl });
+    window.location.href = `/brief-unlocked.html?${params.toString()}`;
+  };
+
   try {
     const res = await fetch('/api/capture-lead', {
       method: 'POST',
@@ -122,8 +127,13 @@ form.addEventListener('submit', async (e) => {
     });
     const data = await res.json();
     if (!res.ok || !data.ok) throw new Error(data.error || 'capture_failed');
-    window.location.href = data.downloadUrl || '/assets/pdf/robotics-brief-real.pdf';
+    redirectToThankYou(data.downloadUrl || '/assets/pdf/robotics-brief-real.pdf');
   } catch (err) {
+    const isLocalPreview = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+    if (isLocalPreview) {
+      redirectToThankYou();
+      return;
+    }
     errorBox.textContent = 'Could not capture your email yet. Double-check that the Vercel environment variables are added and that the Supabase leads table exists.';
     errorBox.style.display = 'block';
   }

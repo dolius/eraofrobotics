@@ -3,9 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Robotics Brief Is Ready | Era of Robotics</title>
-  <meta name="description" content="Access the free robotics brief and move into the next best Era of Robotics pages for tools, market context, and premium analysis." />
+  <title>Thanks — Your Robotics Brief Is Ready | Era of Robotics</title>
+  <meta name="description" content="Thank-you page for the free robotics brief with immediate download access and a simple next step." />
   <link rel="stylesheet" href="global.css" />
+  <style>
+    .thanks-hero{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .thanks-hero .hero-copy{max-width:860px}
+    .micro{font-size:.9rem;color:#9a9a9a;text-transform:uppercase;letter-spacing:.08em}
+    .callout{margin-top:1.25rem;padding:1.25rem;border:1px solid var(--line);background:#111}
+    .callout strong{display:block;margin-bottom:.45rem}
+    .mini-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;margin-top:5rem}
+    @media (max-width:900px){.mini-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -26,31 +35,61 @@
       </nav>
     </div>
   </header>
+
   <div class="wrap-narrow">
-    <section class="hero card">
-      <div class="eyebrow">Brief unlocked</div>
-      <h1>Your Robotics Brief Is Ready — and the Smartest Next Move Is Not to Stop at the Free Stuff</h1>
-      <p>You’re in. The brief gives you the compressed version of what matters now in robotics. The smart next move is not to stop at the summary — it’s to decide whether you want to understand the market more deeply, pressure-test the economics, or look at a premium operator/investor-grade asset.</p>
-      <div class="button-row">
-        <a class="btn" href="/robotics-brief.html">Open the free brief</a>
-        <a class="btn ghost" href="/premium-robotics-brief.html">See the premium report</a>
-        <a class="btn ghost" href="/tools.html">Use the tools</a>
+    <div class="topnav"><a href="/briefs.html">← Back to reports</a></div>
+
+    <section class="hero hero-split thanks-hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Thanks — brief ready</div>
+        <h1>Thanks — here’s your report.</h1>
+        <p class="section-intro">Your robotics brief is ready below. We’ve also captured your email so this can route into the follow-up sequence properly instead of vanishing into the void like a useless lead form.</p>
+        <div class="button-row">
+          <a class="btn" id="download-link" href="/assets/pdf/robotics-brief-real.pdf" download>Download the brief</a>
+          <a class="btn ghost" href="/robotics-brief.html">Read it online</a>
+        </div>
+        <div class="callout">
+          <strong>What happens next</strong>
+          <p>Immediate reward first. Then follow-up. That means the visitor gets the brief right away, and you still get the lead plus the chance to move them toward deeper content, tools, or a premium offer later.</p>
+        </div>
+        <p class="micro" id="email-note"></p>
       </div>
+      <div class="hero-media" style="background-image:url('assets/images/free-brief-cover-visual.png')"></div>
     </section>
 
-    <section class="section grid grid-2-even">
+    <section class="mini-grid">
       <article class="card">
-        <div class="tag">Best next move</div>
-        <h2>If You’re an Operator, Here’s the Next Move That Can Save You From an Expensive Automation Mistake</h2>
-        <p>Go to the readiness, cost, and ROI tools next. The free brief tells you why the category matters. The tools tell you whether your workflow might actually justify a deployment.</p>
+        <div class="tag">Good next step</div>
+        <h2>Want to keep them moving?</h2>
+        <p>Add one clear secondary CTA below the download: read the online brief, use a tool, or view the premium report. One next move. Not a chaos menu.</p>
+        <div class="button-row">
+          <a class="btn ghost" href="/premium-robotics-brief.html">See the premium report</a>
+        </div>
       </article>
+
       <article class="card">
-        <div class="tag">Best next move</div>
-        <h2>If You’re an Investor, Founder, or Strategist, Go Deeper Into the Market View</h2>
-        <p>Once the basic picture is clear, the next step is a deeper look at category structure, deployment realism, and where the strongest signals are emerging across the field.</p>
+        <div class="tag">Funnel logic</div>
+        <h2>This is the right shape.</h2>
+        <p>Email submit → thank-you page → instant download → follow-up sequence. That’s a much cleaner lead-growth flow than making people wait or dumping them directly into a raw PDF.</p>
+        <div class="button-row">
+          <a class="btn ghost" href="/tools.html">Explore tools</a>
+        </div>
       </article>
     </section>
   </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const download = params.get('download');
+    const email = params.get('email');
+    if (download) {
+      const link = document.getElementById('download-link');
+      link.href = download;
+    }
+    if (email) {
+      document.getElementById('email-note').textContent = `Captured for: ${email}`;
+    }
+  </script>
   <script src="site.js"></script>
 </body>
 </html>

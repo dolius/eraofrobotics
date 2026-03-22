@@ -149,7 +149,7 @@ module.exports = async function handler(req, res) {
     if (wantsJson) {
       return json(res, 200, {
         ok: true,
-        thankYouUrl: '/robotics-brief.html',
+        thankYouUrl: '/brief-unlocked.html',
         downloadUrl: '/assets/pdf/robotics-brief-real.pdf',
         premiumUrl: '/premium-robotics-brief.html'
       });

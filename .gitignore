@@ -9,3 +9,5 @@ demo-screens/
 output/generated-videos/
 output/audio-articles/audio/
 *.sqlite3
+.vercel
+.env*.local
